@@ -164,7 +164,7 @@ bindsym $mod+8 workspace $ws8
 # Apps iniciados com o sistema:
 exec urxvt
 exec palemoon
-exec pcmanfm
+# exec pcmanfm
 
 # Iniciando apps em workspaces específicos:
 assign [class="Pale moon"] 1:1:home
