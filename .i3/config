@@ -435,3 +435,8 @@ mode "$mode_gaps_outer" {
 bindsym $mod+shift+x exec blurlock 
 
 #Enabling Multimedia Keys:
+
+# Limitando o tamanho máximo da janela flutuante:
+
+floating_minimum_size 900 x 500
+floating_maximum_size 0 x 0
