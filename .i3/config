@@ -53,7 +53,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 ################################################################################################
 
-# Screen brightness controls
+# Screen brightness controls (Não estão funcionando):
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
@@ -419,3 +419,7 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+# Atalho para trancar a tela:
+
+bindsym $mod+shift+x exec blurlock 
