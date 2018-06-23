@@ -162,12 +162,14 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
 # Apps iniciados com o sistema:
-
+exec urxvt
+exec palemoon
+exec pcmanfm
 
 # Iniciando apps em workspaces específicos:
-assign [class="Pale moon"] $ws1 
-assign [class="URxvt"] $ws2
-assign [class="Pcmanfm"] $ws3
+assign [class="Pale moon"] 1:1:home
+assign [class="URxvt"] 2:2:terminal
+assign [class="Pcmanfm"]3:3:explorer
 
 # Move focused container to workspace
 
