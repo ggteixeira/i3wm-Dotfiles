@@ -440,4 +440,4 @@ bindsym $mod+shift+x exec blurlock
 
 # floating_minimum_size 900 x 500
 floating_minimum_size 0 x 0
-floating_maximum_size 1300 x 650
+floating_maximum_size 1078 x 650
