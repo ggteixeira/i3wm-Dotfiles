@@ -62,9 +62,11 @@ XTerm*faceName:                   Terminus:size=11:antialias=true
 XTerm*selectToClipboard:          true
 
 ! URxvt.font:                      9x15,xft:TerminessTTFNerdFontMono
-! URxvt.font:                       xft:FontAwesome:size=9, xft:Icons:size:9
-URxvt.letterSpace: -1
-URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono:pixelsize10,xft:Inconsolata\ Bold\ for\ Powerline:pixelsize=12
+
+urxvt.font: xft:Iosevka:style=Regular:size=11
+urxvt.boldFont: xft:Iosevka:style=Bold:size=11
+urxvt.letterSpace: -1
+
 ! alternative font settings with 'terminus':
 !URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 !URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
