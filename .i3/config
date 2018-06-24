@@ -163,8 +163,8 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
 # Apps iniciados com o sistema:
-exec urxvt
-exec palemoon
+# exec urxvt
+# exec palemoon
 # exec pcmanfm
 
 # Iniciando apps em workspaces específicos:
@@ -439,4 +439,4 @@ bindsym $mod+shift+x exec blurlock
 # Limitando o tamanho máximo da janela flutuante:
 
 floating_minimum_size 900 x 500
-floating_maximum_size 0 x 0
+floating_maximum_size 1300 x 650
