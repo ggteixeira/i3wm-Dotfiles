@@ -169,7 +169,7 @@ bindsym $mod+8 workspace $ws8
 
 # Iniciando apps em workspaces específicos:
 assign [class="Pale moon"] 1:1:home
-assign [class="URxvt"] 2:2:terminal
+assign [class="Xfce4-terminal"] 2:2:terminal
 assign [class="Pcmanfm"]3:3:explorer
 
 # Move focused container to workspace
