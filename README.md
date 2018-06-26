@@ -1,4 +1,4 @@
 # i3wm-dotfiles
 My dotfiles for i3WM 
 
-A primeira coisa que fiz foi tentar usar o yadm como ferramenta de gerenciamento. 
+Estou implementando o [yadm](https://thelocehiliosan.github.io/yadm/) como ferramenta de gerenciamento dos dotfiles no manjaro-i3wm. 
