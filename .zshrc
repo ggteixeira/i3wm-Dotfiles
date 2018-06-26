@@ -122,7 +122,9 @@ fi
 # Meus aliases:
 alias vimrc='vim ~/.vimrc'
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-
+alias q='exit'
+alias py='python'
+alias zshrc='vim ~/.zshrc'
 # POWERLEVEL9k SETTINGS
 
 # source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
