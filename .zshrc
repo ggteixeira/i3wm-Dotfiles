@@ -129,5 +129,3 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 # Mais uma tentativa de colocar o VirtualEnv no ZSH:
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-
-
