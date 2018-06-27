@@ -148,10 +148,11 @@ bindsym $mod+Ctrl+Left workspace prev
 
 # set $ws1 1:1:
 
-set $ws1 1:1:home
-set $ws2 2:2:terminal
-set $ws3 3:3:explorer
-
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
+set $ws4 4:
+set $ws5 5:workspace 5
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -168,9 +169,9 @@ bindsym $mod+8 workspace $ws8
 # exec pcmanfm
 
 # Iniciando apps em workspaces específicos:
-assign [class="Pale moon"] 1:1:home
-assign [class="Termite"] 2:2:terminal
-assign [class="Pcmanfm"]3:3:explorer
+assign [class="Pale moon"] 1:
+assign [class="Termite"] 2:
+assign [class="Pcmanfm"]3:
 
 # Move focused container to workspace
 
