@@ -167,14 +167,14 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
 # Apps iniciados com o sistema:
-# exec termite 
+exec termite 
 # exec palemoon
 # exec pcmanfm
 
 # Iniciando apps em workspaces específicos:
 assign [class="Pale moon"] 1:
 assign [class="Termite"] 2:
-# assign [class="Pcmanfm"]3:
+assign [class="Pcmanfm"]3:
 assign [class="Spotify"]7:Spotify
 # Move focused container to workspace
 
