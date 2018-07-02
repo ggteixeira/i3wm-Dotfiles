@@ -151,10 +151,10 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 1:
 set $ws2 2:
 set $ws3 3:
-set $ws4 4:
+set $ws4 4:workspace 4 
 set $ws5 5:workspace 5
 set $ws6 6:workspace 6
-set $ws7 7:workspace 7
+set $ws7 7:Spotify
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -174,8 +174,8 @@ bindsym $mod+8 workspace $ws8
 # Iniciando apps em workspaces específicos:
 assign [class="Pale moon"] 1:
 assign [class="Termite"] 2:
-assign [class="Pcmanfm"]3:
-
+# assign [class="Pcmanfm"]3:
+assign [class="Spotify"]7:Spotify
 # Move focused container to workspace
 
 bindsym $mod+Ctrl+1 move container to workspace $ws1
