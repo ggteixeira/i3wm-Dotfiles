@@ -380,7 +380,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 8
+gaps inner 5 
 gaps outer -4 
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
@@ -440,6 +440,5 @@ bindsym $mod+shift+x exec blurlock
 
 # Limitando o tamanho máximo da janela flutuante:
 
-# floating_minimum_size 900 x 500
 floating_minimum_size 0 x 0
 floating_maximum_size 1078 x 650
