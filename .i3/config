@@ -153,6 +153,9 @@ set $ws2 2:
 set $ws3 3:
 set $ws4 4:
 set $ws5 5:workspace 5
+set $ws6 6:workspace 6
+set $ws7 7:workspace 7
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
