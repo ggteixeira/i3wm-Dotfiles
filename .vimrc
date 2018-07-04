@@ -15,9 +15,11 @@ colorscheme industry  " set color scheme
 set showmatch                               " shows matching part of bracket pairs (), [], {}
 set enc=utf-8	                            " utf-8 by default
 set hlsearch
-set syntax=python3
-filetype indent plugin on
-
+set syntax=python
+filetype indent on
+filetype on
+filetype plugin on
+set smarttab
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
