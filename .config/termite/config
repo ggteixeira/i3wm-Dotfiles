@@ -44,12 +44,12 @@ scrollbar = off
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
+cursor = #dcdccc
+cursor_foreground = #dcdccc
 
-#foreground = #dcdccc
-#foreground_bold = #ffffff
-#background = #3f3f3f
+foreground = #dcdccc
+foreground_bold = #ffffff
+background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
