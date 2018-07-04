@@ -4,11 +4,14 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set number
-" set relativenumber!
 set smartindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+" set textwidth=4
 set expandtab
+set autoindent
+set fileformat=unix
 syntax on                               " syntax highlight
 set t_Co=256                                " set 256 colors
 colorscheme industry  " set color scheme
@@ -16,10 +19,11 @@ set showmatch                               " shows matching part of bracket pai
 set enc=utf-8	                            " utf-8 by default
 set hlsearch
 set syntax=python
-filetype indent on
-filetype on
+filetype plugin indent on
 filetype plugin on
 set smarttab
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -64,7 +68,7 @@ let g:airline_solarized_bg='dark'
 let g:airline_theme='deus'
 let g:airline_powerline_fonts = 1 
 
-" lints
+" ==== lints
 let g:pymode_lint=0
 
 " ==== * ==== Python ==== * ==== * ====
@@ -77,10 +81,8 @@ let g:python_highlight_all = 1
 let g:python_highlight_string_formatting = 1
 let g:Python3Syntax = 1
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 " =====================================================
 "" General settings
@@ -124,4 +126,15 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" ==== Suporte ao VirtualEnv
+
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
