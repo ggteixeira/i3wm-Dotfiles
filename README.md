@@ -1,7 +1,5 @@
 # i3wm-dotfiles
 
-![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/terminais.png)
-
 ### **VIM**
 
 - **Plugins instalados:**
@@ -15,13 +13,9 @@
   - [Python-mode](https://github.com/python-mode/python-mode)
   - [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
 
-
+![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/terminais.png)
 
 ------
-
-
-
-![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/vscode.png)
 
 ### **Visual Studio Code:**
 
@@ -34,3 +28,5 @@
   - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) (tema)
   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) (keymap)
+
+![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/vscode.png)
