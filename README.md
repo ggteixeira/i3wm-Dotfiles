@@ -17,6 +17,10 @@
 
 
 
+------
+
+
+
 ![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/vscode.png)
 
 ### **Visual Studio Code:**
