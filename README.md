@@ -1,6 +1,6 @@
 # i3wm-dotfiles
 
-![Dekstop](https://github.com/guiemi/i3wm-dotfiles/blob/master/2018-07-07-152734_1360x768_scrot.png)
+![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/terminais.png)
 
 ### **VIM**
 
@@ -16,6 +16,8 @@
   - [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
 
 
+
+![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/vscode.png)
 
 ### **Visual Studio Code:**
 
