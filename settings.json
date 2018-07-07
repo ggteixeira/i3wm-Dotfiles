@@ -59,7 +59,6 @@
         ],
         "Red"
     ],
-    "workbench.colorTheme": "One Dark Pro Vivid",
     "update.channel": "none",
     "python.venvPath": "/home/guiemi/Dropbox/programacao/python/python-exercises/django/venv/bin/python3",
     "python.pythonPath": "",
@@ -67,6 +66,7 @@
     "window.menuBarVisibility": "toggle",
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.rendererType": "dom",
-    "terminal.integrated.fontFamily": "monospace",    
+    "terminal.integrated.fontFamily": "monospace",
+    "workbench.colorTheme": "One Dark Pro Vivid",    
     
 }
