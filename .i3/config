@@ -42,9 +42,9 @@ bindsym $mod+d exec --no-startup-id dmenu_recency
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
-################################################################################################
+##########################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
+###########################################################################################
 
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
@@ -52,7 +52,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 
-################################################################################################
+############################################################################################
 
 # Screen brightness controls (Não estão funcionando):
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -148,13 +148,20 @@ bindsym $mod+Ctrl+Left workspace prev
 
 # set $ws1 1:1:
 
-set $ws1 "1: Terminal" 
-set $ws2 "2: Code"
-set $ws3 "3: Navegador"
-set $ws4 "4: Explorer"
-set $ws5 "5: Escrita"
-set $ws6 "6: Spotify" 
-set $ws7 "7:   Outer"
+#set $ws1 "1: Terminal" 
+#set $ws2 "2: Code"
+#set $ws3 "3: Navegador"
+#set $ws4 "4: Explorer"
+#set $ws5 "5: Escrita"
+#set $ws6 "6: Spotify" 
+#set $ws7 "7:   Outer"
+
+set $ws1 
+set $ws2 
+set $ws3 
+set $ws4 
+set $ws5 
+set $ws6 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
