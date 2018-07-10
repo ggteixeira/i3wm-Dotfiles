@@ -48,9 +48,6 @@ offset-x = 0
 # border-right-size = 2
 # border-left-size = 2
 
-
-
-
 ;-----------------;
 ; LOCATION ;
 ;----------------;
@@ -60,8 +57,8 @@ bottom = false
 ; FONTS ;
 ;-----------;
 
-font-0 = "DejaVu Sans for Powerline:pixelsize=10;6"
-font-1 = "IcoMoon-Free:size=11:weight=bold;2"
+font-0 = "Droid Sans:pixelsize=11;4"
+font-1 = "IcoMoon-Free:size=11:weight=bold;5"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;3"
 font-3 = "Noto Sans:size=11;1"
 
@@ -87,9 +84,10 @@ fixed-center = true
 radius = 0.0
 modules-left = i3
 modules-center = date
-modules-right = battery
+modules-right = battery memory
 # override-redirect = false
-# modules-right = date
+padding-left = 0
+padding-right = 1
 ;-----------------;
 ; MODULES ;
 ;----------------;
@@ -131,11 +129,17 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 
 format-charging = <label-charging><ramp-capacity>
-label-charging = No carregador %percentage%%
+label-charging = |No carregador %percentage%%
 
 format-discharging = <label-discharging><ramp-capacity> 
-label-discharging = Na bateria (%percentage%%)
+label-discharging = |Na bateria (%percentage%%)
+format-charging-spacing = 2
+format-discharging-spacing = 2
 
+[module/memory]
+type = internal/memory
+interval = 3
+label = |Memória: %percentage_used%%
+format = <label>
 
-
-
+format-spacing = 5
