@@ -42,6 +42,7 @@ font-0 = "Droid Sans Mono:pixelsize=10;6"
 font-1 = "Roboto:size=11:weight=bold;2"
 # font-2 = "Noto Sans:size=11;1"
 
+
 [module/date]
 type = internal/date
 interval = 1
@@ -52,9 +53,10 @@ label = %date% %time%
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-index-sort = true
+index-sort = false 
 wrapping-scroll = false
 # pin-workspaces = true
-strip-wsnumbers = false
+# strip-wsnumbers = false
 enable-click = true
 
+ws-icon-0 = 1;
