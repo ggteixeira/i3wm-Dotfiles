@@ -86,7 +86,7 @@ monitor-strict = false
 fixed-center = true
 radius = 0.0
 modules-left = i3
-# modules-center = date
+modules-center = date
 modules-right = battery
 # override-redirect = false
 # modules-right = date
@@ -112,9 +112,10 @@ ws-icon-5 = 6;
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 1.0
 time = %H:%M
-time-alt = %d/%m
+date = %a %b %d
+# time-alt = %d/%m
 label = %date% %time%
 
 [module/battery]
@@ -123,14 +124,18 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <label-charging><ramp-capacity>
-label-charging = No carregador %percentage%%
-
-format-discharging = <label-discharging><ramp-capacity> 
-label-discharging = Na bateria %percentage%%
-
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+
+format-charging = <label-charging><ramp-capacity>
+label-charging = No carregador %percentage%%
+
+format-discharging = <label-discharging><ramp-capacity> 
+label-discharging = Na bateria (%percentage%%)
+
+
+
+
