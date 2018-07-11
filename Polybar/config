@@ -28,7 +28,7 @@ alert = #E5201D
 ;------------------------;
 ; POLYBAR/TOP  ;
 ;-----------------------;
-[bar/top]
+[bar/main]
 line-size = 3
 line-color = #f00
 
@@ -51,7 +51,7 @@ offset-x = 0
 ;-----------------;
 ; LOCATION ;
 ;----------------;
-bottom = false
+bottom = true
 
 ;-------------;
 ; FONTS ;
@@ -84,11 +84,11 @@ fixed-center = true
 radius = 0.0
 modules-left = i3
 modules-center = date
-modules-right = volume battery memory wired-network powermenu
+modules-right = volume battery memory wired-network pkg
 # override-redirect = false
-padding-left = 1
-padding-right = 1
-
+padding-left = 0
+padding-right = 2
+# screenchange-reload = true
 ;-----------------;
 ; MODULES ;
 ;----------------;
@@ -170,7 +170,7 @@ label-disconnected-foreground = #E5201D
 # Só conseguirei configurar este quando o i3wm não estiver mais em uma VM.
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 master-soundcard = default
 speaker-soundcard = default
@@ -184,3 +184,17 @@ ramp-volume-0 = 
 ramp-volume-1 =  
 ramp-volume-2 =  
 ramp-volume-3 = 
+
+[module/pkg]
+type = custom/script
+exec = checkupdates
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+tail = true
+format = 
+format-foreground = #f00
+format-padding = 1
+click-left = exec pamac-updater
+
+# label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
+# label = %{A1:pamac-manager & disown:} %output%%{A} %{A}
