@@ -84,7 +84,7 @@ fixed-center = true
 radius = 0.0
 modules-left = i3
 modules-center = date
-modules-right = battery memory wired-network
+modules-right = volume battery memory wired-network powermenu
 # override-redirect = false
 padding-left = 1
 padding-right = 1
@@ -112,7 +112,8 @@ label-unfocused-padding = 1
 label-focused-padding = 1
 label-mode-foreground = #000000
 label-mode-background = #000000
-label-focused-underline = #268BD2
+label-focused-foreground = #268BD2
+# label-focused-underline = #268BD2
 
 [module/date]
 type = internal/date
@@ -120,7 +121,7 @@ interval = 1.0
 time = %H:%M
 date = %a %b %d
 # time-alt = %d/%m
-label = %date% | %time%
+label = %date% %time%
 
 [module/battery]
 type = internal/battery
@@ -134,11 +135,11 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-format-charging = |<ramp-capacity><label-charging>
+format-charging = |<label-charging><ramp-capacity>
 label-charging = Carregando %percentage%%
 
 format-discharging = <label-discharging><ramp-capacity> 
-label-discharging = |Na bateria (%percentage%%)
+label-discharging = | %percentage%%
 format-charging-spacing = 2
 format-discharging-spacing = 2
 
@@ -160,10 +161,26 @@ interval = 1.0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = Conectado 
+label-connected = Rede cabeada 
 label-disconnected = Offline 
 
 format-connected-foreground = #268BD2
 label-disconnected-foreground = #E5201D
 
 # Só conseguirei configurar este quando o i3wm não estiver mais em uma VM.
+
+[module/volume]
+type = internal/volume
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+format-volume = <label-volume> <ramp-volume>
+format-muted = <label-muted>
+
+label-muted = Mudo 
+ramp-volume-0 =  
+ramp-volume-1 =  
+ramp-volume-2 =  
+ramp-volume-3 = 
