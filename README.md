@@ -30,3 +30,14 @@
   - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) (keymap)
 
 ![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/vscode.png)
+
+
+
+------
+
+### Polybar:
+
+
+
+![](https://github.com/guiemi/i3wm-dotfiles/blob/master/desktop-polybar-inicial.png)
+
