@@ -1,30 +1,30 @@
--;========================================================== 	
--; 	
--; 	
--;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 	
--;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ 	
--;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝ 	
--;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ 	
--;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║ 	
--;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ 	
--; 	
--; 	
--;   To learn more about how to configure Polybar 	
--;   go to https://github.com/jaagr/polybar 	
--; 	
--;   The README contains alot of information 	
--; 	
--;==========================================================
+;========================================================== 	
+; 	
+; 	
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 	
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ 	
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝ 	
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ 	
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║ 	
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ 	
+; 	
+; 	
+;   To learn more about how to configure Polybar 	
+;   go to https://github.com/jaagr/polybar 	
+; 	
+;   The README contains alot of information 	
+; 	
+;==========================================================
 
 [colors]
-background = #000000
-background-alt = #000000
-foreground = #ffffff
+background = #353836
+background-alt = #556064
+foreground = #268BD2
 foreground-alt = #a6a6a6
 highlight = #ffffff
 primary = #ffb52a
 secondary = #e60053
-alert = #bd2c40
+alert = #E5201D
 ;------------------------;
 ; POLYBAR/TOP  ;
 ;-----------------------;
@@ -39,7 +39,7 @@ border-color = #00000000
 ; DIMENSIONS ;
 ;--------------------;
 width = 100%
-height = 25
+height = 28
 offset-y = 0
 offset-x = 0
 
@@ -84,29 +84,35 @@ fixed-center = true
 radius = 0.0
 modules-left = i3
 modules-center = date
-modules-right = battery memory
+modules-right = battery memory wired-network
 # override-redirect = false
-padding-left = 0
+padding-left = 1
 padding-right = 1
+
 ;-----------------;
 ; MODULES ;
 ;----------------;
-
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
+format = <label-state><label-mode>
 index-sort = true 
 wrapping-scroll = false
-pin-workspaces = true
-strip-wsnumbers = false
 enable-click = true
+enable-scroll = true
+# strip-wsnumbers = true
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;:
+ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
+
+label-unfocused-padding = 1
+label-focused-padding = 1
+label-mode-foreground = #000000
+label-mode-background = #000000
+label-focused-underline = #268BD2
 
 [module/date]
 type = internal/date
@@ -114,7 +120,7 @@ interval = 1.0
 time = %H:%M
 date = %a %b %d
 # time-alt = %d/%m
-label = %date% %time%
+label = %date% | %time%
 
 [module/battery]
 type = internal/battery
@@ -128,18 +134,36 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-format-charging = <label-charging><ramp-capacity>
-label-charging = |No carregador %percentage%%
+format-charging = |<ramp-capacity><label-charging>
+label-charging = Carregando %percentage%%
 
 format-discharging = <label-discharging><ramp-capacity> 
 label-discharging = |Na bateria (%percentage%%)
 format-charging-spacing = 2
 format-discharging-spacing = 2
 
+label-full = |Bateria carregada 
+
 [module/memory]
 type = internal/memory
 interval = 3
-label = |Memória: %percentage_used%%
+label = |RAM: %percentage_used%%|
 format = <label>
 
 format-spacing = 5
+
+[module/wired-network]
+type = internal/network
+interface = enp0s3
+interval = 1.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = Conectado 
+label-disconnected = Offline 
+
+format-connected-foreground = #268BD2
+label-disconnected-foreground = #E5201D
+
+# Só conseguirei configurar este quando o i3wm não estiver mais em uma VM.
