@@ -4,7 +4,7 @@
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 	
 ;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ 	
 ;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝ 	
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ 	
+;   d██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ 	
 ;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║ 	
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ 	
 ; 	
@@ -31,10 +31,10 @@ alert = #E5201D
 [bar/main]
 line-size = 3
 line-color = #f00
-
 border-size = 0
 border-color = #00000000
-
+module-margin-left = 1
+module-margin-right = 1
 ;---------------------;
 ; DIMENSIONS ;
 ;--------------------;
@@ -57,9 +57,9 @@ bottom = true
 ; FONTS ;
 ;-----------;
 
-font-0 = "Droid Sans:pixelsize=11;4"
+font-0 = "Noto Sans:pixelsize=11;4"
 font-1 = "IcoMoon-Free:size=11:weight=bold;5"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;3"
+font-2 = "FontAwesome:style=Regular:pixelsize=8;3"
 font-3 = "Noto Sans:size=11;1"
 
 ;---------------;
@@ -82,9 +82,12 @@ monitor = VGA-1
 monitor-strict = false
 fixed-center = true
 radius = 0.0
+
 modules-left = i3
 modules-center = date
 modules-right = volume battery memory wired-network pkg
+tray-position = right
+
 # override-redirect = false
 padding-left = 0
 padding-right = 2
@@ -101,12 +104,24 @@ enable-click = true
 enable-scroll = true
 # strip-wsnumbers = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
+# IcoMoon:
+
+# ws-icon-0 = 1;
+# ws-icon-1 = 2;
+# ws-icon-2 = 3;
+# ws-icon-3 = 4;
+# ws-icon-4 = 5;
+# ws-icon-5 = 6;
+
+# FontAwesome:
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
 
 label-unfocused-padding = 1
 label-focused-padding = 1
@@ -135,20 +150,20 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-format-charging = |<label-charging><ramp-capacity>
+format-charging = <label-charging><ramp-capacity>
 label-charging = Carregando %percentage%%
 
 format-discharging = <label-discharging><ramp-capacity> 
-label-discharging = | %percentage%%
+label-discharging =  %percentage%%
 format-charging-spacing = 2
 format-discharging-spacing = 2
 
-label-full = |Bateria carregada 
+label-full = Bateria carregada 
 
 [module/memory]
 type = internal/memory
 interval = 3
-label = |RAM: %percentage_used%%|
+label = RAM: %percentage_used%%
 format = <label>
 
 format-spacing = 5
@@ -191,9 +206,10 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = 
+# format = 
+format = 
 format-foreground = #f00
-format-padding = 1
+format-padding = 2
 click-left = exec pamac-updater
 
 # label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
