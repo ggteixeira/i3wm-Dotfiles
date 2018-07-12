@@ -156,12 +156,22 @@ bindsym $mod+Ctrl+Left workspace prev
 #set $ws6 "6: Spotify" 
 #set $ws7 "7:   Outer"
 
-set $ws1 
-set $ws2 
-set $ws3 
-set $ws4 
-set $ws5 
-set $ws6 
+# IcoMoon:
+# set $ws1  
+# set $ws2  
+# set $ws3  
+# set $ws4  
+# set $ws5  
+# set $ws6  
+
+# FontAwesome:
+set $ws1  Terminal
+set $ws2  Code
+set $ws3  Navegador
+set $ws4  Arquivos
+set $ws5  Escrita
+set $ws6  Spotify
+set $ws7  Outer
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -180,7 +190,6 @@ bindsym $mod+8 workspace $ws8
 # exec pcmanfm
 # exec typora
 # exec spotify
-#
 
 # Iniciando apps em workspaces específicos:
 assign [class="Termite"] $ws1
@@ -347,7 +356,7 @@ set_from_resource $term_color15    color15
 bar {
 	i3bar_command i3bar
 	status_command i3status
-	position bottom
+	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
