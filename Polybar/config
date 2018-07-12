@@ -185,7 +185,7 @@ label-disconnected-foreground = #E5201D
 # Só conseguirei configurar este quando o i3wm não estiver mais em uma VM.
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
 master-soundcard = default
 speaker-soundcard = default
