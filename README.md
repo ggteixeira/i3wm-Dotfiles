@@ -13,7 +13,7 @@
   - [Python-mode](https://github.com/python-mode/python-mode)
   - [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
 
-![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/terminais.png)
+![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminais.png)
 
 ------
 
@@ -29,7 +29,7 @@
   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) (keymap)
 
-![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/vscode.png)
+![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/vscode.png)
 
 
 
@@ -39,5 +39,5 @@
 
 
 
-![](https://github.com/guiemi/i3wm-dotfiles/blob/master/desktop-polybar-inicial.png)
+![Polybar-almost-there](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-almost.png)
 
