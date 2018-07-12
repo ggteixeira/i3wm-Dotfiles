@@ -165,13 +165,13 @@ bindsym $mod+Ctrl+Left workspace prev
 # set $ws6  
 
 # FontAwesome:
-set $ws1  Terminal
-set $ws2  Code
-set $ws3  Navegador
-set $ws4  Arquivos
-set $ws5  Escrita
-set $ws6  Spotify
-set $ws7  Outer
+set $ws1 "1: Terminal"
+set $ws2 2: Code
+set $ws3 3: Navegador
+set $ws4 4: Arquivos
+set $ws5 5: Escrita
+set $ws6 6: Spotify
+set $ws7 7: Outer
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
