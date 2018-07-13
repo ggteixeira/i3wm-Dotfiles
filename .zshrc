@@ -1,3 +1,10 @@
+################
+##                        ##
+##   Z S H R C    ##
+##                        ##
+################
+
+
 # lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -21,8 +28,13 @@ compinit
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="robbyrussell"
+POWERLEVEL9K_DISABLE_RPROMPT=true
+
 # ZSH_THEME="agnoster"
+# ZSH_THEME="random"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
