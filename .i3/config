@@ -11,7 +11,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1  
+new_window pixel 1
 new_float pixel 1 
 
 # Hide borders
@@ -165,7 +165,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # set $ws6  
 
 # FontAwesome:
-set $ws1 "1: Terminal"
+set $ws1 1: Terminal 
 set $ws2 2: Code
 set $ws3 3: Navegador
 set $ws4 4: Arquivos
@@ -386,22 +386,24 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
+# class                            border  backgr. text    indic.   child_border
+  client.focused              #556064 #a6a6a6 #80FFF9 #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.unfocused          #2F3D44 #2F3D44 #1ABC9C #454948
+  client.urgent                #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.placeholder        #000000 #0c0c0c #ffffff #000000 
 
-  client.background       #2B2C2B
+  client.background         #2B2C2B
+
 
 #############################
 ### settings for i3-gaps: ###
 #############################
 
 # Set inner/outer gaps
-gaps inner 2 
-gaps outer 2 
+
+gaps inner 3 
+gaps outer 3 
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -409,11 +411,13 @@ gaps outer 2
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
