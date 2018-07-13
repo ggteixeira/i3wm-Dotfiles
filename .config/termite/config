@@ -27,7 +27,7 @@ scrollback_lines = 10000
 cursor_blink = system
 
 # "block", "underline" or "ibeam"
-cursor_shape = block
+cursor_shape = beam
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -44,13 +44,16 @@ scrollbar = off
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-cursor = #dcdccc
+
+# cursor = #dcdccc
+cursor = #268BD2
 cursor_foreground = #dcdccc
 
-foreground = #dcdccc
+# foreground = #dcdccc
+background = #353836
 foreground_bold = #ffffff
-background = #3f3f3f
 
+# background = #3f3f3f
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
 
