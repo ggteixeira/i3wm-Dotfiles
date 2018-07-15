@@ -226,10 +226,10 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-# format = 
-format = 
-format-foreground = #f00
-format-padding = 2
+format = 
+# format = 
+format-foreground = ${colors.alert}
+format-padding = 1
 click-left = exec pamac-updater
 
 # label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
