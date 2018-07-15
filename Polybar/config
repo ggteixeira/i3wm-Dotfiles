@@ -119,7 +119,7 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
-# ws-icon-default = 
+# ws-icon-default = " "
 
 label-focused-foreground = ${colors.foreground}
 # label-focused-underline = ${colors.foreground}
@@ -140,7 +140,7 @@ interval = 1.0
 time = %H:%M
 date = %a %b %d
 time-alt  = Larga a porra do mouse
-label = | %date% %time%
+label = %date% %time%
 
 [module/battery]
 type = internal/battery
