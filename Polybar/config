@@ -134,9 +134,9 @@ type = internal/xwindow
 
 ; Available tags:
 ;   <label> (default)
-format = |<label>
-# format-background = #f00
-# format-foreground = #000
+format = <label>
+# format-background = 
+# format-foreground = #000000000000
 # format-padding = 2
 
 ; Available tokens:
