@@ -5,11 +5,11 @@
 ;========================================
 
 [colors]
-background = #353836
-background-alt = #556064
-foreground = #268BD2
+background = #2B2C2B
+background-alt = #444
+foreground = #dfdfdf
 foreground-alt = #a6a6a6
-highlight = #ffffff
+highlight = #268BD2
 primary = #ffb52a
 secondary = #e60053
 alert = #E5201D
@@ -55,14 +55,14 @@ font-3 = "Noto Sans:size=11;1"
 ; COLORS ;
 ;--------------;
 
-background = #2B2C2B
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-highlight = #ffffff
-primary = #FFF
-secondary = #B2535B
-alert = #bd2c40
+background = ${colors.background}
+background-alt = ${colors.background-alt}
+foreground = ${colors.foreground}
+foreground-alt = ${colors.foreground-alt}
+highlight = ${colors.highlight}
+primary = ${colors.primary}
+secondary = ${colors.secondary}
+alert = ${colors.alert}
 
 ;----------------------------;
 ; MISCELLANEOUS ;
@@ -72,7 +72,7 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3 title
+modules-left = i3
 modules-center =
 modules-right = pkg wired-network memory volume battery  date
 # override-redirect = false
@@ -114,19 +114,20 @@ ws-icon-6 = 7;
 
 
 label-focused = %icon% %name%
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.highlight}
 # label-focused-underline = ${colors.foreground}
 label-urgent-foreground = ${colors.alert}
+
 # label-unfocused = %name%
-label-focused-padding = 0
-label-unfocused-padding = 0
+# label-focused-padding = 0
+# label-unfocused-padding = 0
 
 label-separator = |
 label-separator-padding = 0
 label-separator-foreground = ${colors.background}
 
 label-visible = %index%
-label-visible-underline = #555555
+label-visible-underline = ${colors.highlight}
 label-visible-padding = 4
 
 [module/title]
@@ -134,7 +135,7 @@ type = internal/xwindow
 
 ; Available tags:
 ;   <label> (default)
-format = <label>
+format = | <label>
 # format-background = 
 # format-foreground = #000000000000
 # format-padding = 2
@@ -149,8 +150,8 @@ label-maxlen = 100
 type = internal/date
 interval = 1.0
 time = %H:%M
+# time-alt  = Larga a porra do mouse
 date = %a %b %d
-time-alt  = Larga a porra do mouse
 label = %date% %time%
 
 [module/battery]
@@ -191,8 +192,10 @@ animation-charging-4 = 
 [module/memory]
 type = internal/memory
 interval = 3
-label =  %percentage_used%%
+label = %percentage_used%%
 format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.highlight}
 
 format-spacing = 5
 
@@ -204,16 +207,15 @@ interval = 1.0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-# format-connected-prefix = " "
-# format-disconnected-prefix = " "
+format-connected-prefix = " "
+format-disconnected-prefix = " "
 
-label-connected =  " "
-label-disconnected = " "
+label-connected =  "Conectado"
+label-disconnected = "Desconectado"
 
-format-connected-foreground = ${colors.foreground}
-format-disconnected-foreground = ${colors.alert}
+format-connected-prefix-foreground = ${colors.highlight}
+format-disconnected-prefix-foreground = ${colors.alert}
 
-# Só conseguirei configurar este quando o i3wm não estiver mais em uma VM.
 
 [module/volume]
 type = internal/pulseaudio
@@ -225,11 +227,14 @@ headphone-soundcard = default
 format-volume = <ramp-volume> <label-volume> 
 format-muted = <label-muted>
 
-label-muted = Mudo 
+label-muted =  0%
 ramp-volume-0 =  
 ramp-volume-1 =  
 ramp-volume-2 =  
 ramp-volume-3 = 
+
+format-foreground = ${colors.highlight}
+
 
 [module/pkg]
 type = custom/script
