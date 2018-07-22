@@ -67,7 +67,7 @@ alert = ${colors.alert}
 ;----------------------------;
 ; MISCELLANEOUS ;
 ;---------------------------;
-monitor = VGA-1
+monitor = eDP1
 monitor-strict = true
 fixed-center = true
 radius = 0.0

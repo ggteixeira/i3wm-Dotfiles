@@ -7,7 +7,7 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
-polybar main -r &
-polybar top -r
+polybar main -r
+# polybar top -r
 # polybar -c /home/guiemi/.config/polybar/config top
 echo "Bars launched..."
