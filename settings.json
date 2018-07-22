@@ -43,7 +43,7 @@
     "editor.tabCompletion": false,
     "workbench.editor.tabSizing": "shrink",
     "workbench.statusBar.feedback.visible": false,
-    "editor.fontFamily": "Helvetica",
+    "editor.fontFamily": "Noto Sans",
     "python.autoComplete.addBrackets": true,
     "python.formatting.provider": "autopep8",
     "editor.autoIndent": true,
