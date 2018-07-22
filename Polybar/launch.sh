@@ -10,4 +10,3 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar main -r
 # polybar top -r
 # polybar -c /home/guiemi/.config/polybar/config top
-echo "Bars launched..."
