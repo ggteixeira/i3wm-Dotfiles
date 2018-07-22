@@ -46,10 +46,10 @@ bottom = true
 ; FONTS ;
 ;-----------;
 
-font-0 = "Noto Sans:pixelsize=11;4"
-font-1 = "IcoMoon-Free:size=11:weight=regular;5"
-font-2 = "FontAwesome:style=Regular:pixelsize=8;3"
-font-3 = "Noto Sans:size=11;1"
+font-2 = "Noto Sans:pixelsize=11;4"
+font-0 = "Font Awesome:weight=Regular:pixelsize=9;3"
+font-1 = "IcoMoon-Free:size=11:style=regular;5"
+# font-3 = "Noto Sans:size=11;1"
 
 ;---------------;
 ; COLORS ;
@@ -73,8 +73,8 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3
-modules-center =
-modules-right = pkg wired-network memory volume battery  date
+modules-center = backlight 
+modules-right = volume pkg wired-network memory battery  date
 # override-redirect = false
 padding-left = 1
 padding-right = 2
@@ -156,9 +156,9 @@ label = %date% %time%
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = AC
-full-at = 98
+full-at = 100
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
@@ -201,14 +201,14 @@ format-spacing = 5
 
 [module/wired-network]
 type = internal/network
-interface = enp0s3
+interface = enp2s0
 interval = 1.0
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-format-connected-prefix = " "
-format-disconnected-prefix = " "
+format-connected-prefix = " "
+format-disconnected-prefix = " "
 
 label-connected =  "Conectado"
 label-disconnected = "Desconectado"
@@ -218,22 +218,61 @@ format-disconnected-prefix-foreground = ${colors.alert}
 
 
 [module/volume]
-type = internal/pulseaudio
+type = internal/alsa
 
 master-soundcard = default
 speaker-soundcard = default
 headphone-soundcard = default
 
-format-volume = <ramp-volume> <label-volume> 
-format-muted = <label-muted>
 
-label-muted =  0%
+format-volume = Volume <bar-volume> <label-volume> 
+format-muted = <label-muted>
+l
+label-muted = Volume mudo
 ramp-volume-0 =  
 ramp-volume-1 =  
 ramp-volume-2 =  
 ramp-volume-3 = 
-
 format-foreground = ${colors.highlight}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #B2535B
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 4
+bar-volume-fill = 
+bar-volume-fill-font = 4
+bar-volume-empty = 
+bar-volume-empty-font = 4
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
+[module/backlight]
+type = internal/xbacklight
+output = eDP1
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+format = Brilho <bar>
+# label = " " 
+label-foreground = %{colors.primary}
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = ${colors.primary}
+bar-indicator-font = 4
+bar-fill = 
+bar-fill-font = 4
+bar-fill-foreground = #9f78e1
+bar-empty = 
+bar-empty-font = 4
+bar-empty-foreground = ${colors.foreground-alt}
 
 
 [module/pkg]
@@ -242,8 +281,7 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = 
-# format = 
+format = 
 format-foreground = ${colors.alert}
 format-padding = 1
 click-left = exec pamac-updater
