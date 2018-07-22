@@ -74,9 +74,9 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3 ;title
+modules-left = i3 title
 modules-center = 
-modules-right = wired-network wireless-network backlight volume pkg  memory battery  date
+modules-right = pkg wired-network wireless-network backlight volume  memory battery  date
 ; override-redirect = false
 padding-left = 1
 padding-right = 1
@@ -160,7 +160,7 @@ label = %date% %time%
 type = internal/battery
 battery = BAT1
 adapter = AC
-full-at = 100
+full-at = 98
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
@@ -241,7 +241,7 @@ ramp-volume-0 = 
 ramp-volume-1 =  
 ramp-volume-2 =  
 ramp-volume-3 = 
-format-foreground = ${colors.highlight}
+format-volume-prefix-foreground = ${colors.highlight}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.highlight}
