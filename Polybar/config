@@ -75,12 +75,12 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3 title
-modules-center = 
-modules-right = pkg wired-network wireless-network backlight volume  memory battery  date
-; override-redirect = false
+modules-center = date
+modules-right = pkg wired-network wireless-network backlight volume  memory battery  
+override-redirect = false
 padding-left = 1
 padding-right = 1
-; screenchange-reload = true
+screenchange-reload = true
 
 ;--------------------;
 ; TRAY ICONS ;
