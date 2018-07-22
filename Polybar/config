@@ -19,23 +19,24 @@ alert = #E5201D
 ;-----------------------;
 [bar/main]
 line-size = 3
-line-color = #f00
+; line-color = #f00
 border-size = 0
 border-color = #00000000
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 2
+module-margin-right = 2
+separator = |
 ;---------------------;
 ; DIMENSIONS ;
 ;--------------------;
 width = 100%
-height = 24
+height = 20
 offset-y = 0
 offset-x = 0
 
-# border-top-size = 3
-# border-bottom-size = 5
-# border-right-size = 3
-# border-left-size = 3
+;border-top-size = 3
+;border-bottom-size = 5
+;border-right-size = 3
+;border-left-size = 3
 
 ;-----------------;
 ; LOCATION ;
@@ -46,10 +47,11 @@ bottom = true
 ; FONTS ;
 ;-----------;
 
-font-2 = "Noto Sans:pixelsize=11;4"
-font-0 = "Font Awesome:weight=Regular:pixelsize=9;3"
-font-1 = "IcoMoon-Free:size=11:style=regular;5"
-# font-3 = "Noto Sans:size=11;1"
+font-0 = "Noto Sans:pixelsize=9;3"
+font-1 = "Font Awesome:style=Regular:pixelsize=11;2"
+font-2 = "icomoon:size=11:Style=Regular;5"
+font-3 = "Font Awesome 5 Free:style:Regular"
+
 
 ;---------------;
 ; COLORS ;
@@ -72,13 +74,13 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3
-modules-center = backlight 
-modules-right = volume pkg wired-network memory battery  date
-# override-redirect = false
+modules-left = i3 ;title
+modules-center = 
+modules-right = wired-network wireless-network backlight volume pkg  memory battery  date
+; override-redirect = false
 padding-left = 1
-padding-right = 2
-# screenchange-reload = true
+padding-right = 1
+; screenchange-reload = true
 
 ;--------------------;
 ; TRAY ICONS ;
@@ -88,7 +90,7 @@ tray-position = right
 tray-detached = false
 tray-maxsize = 20
 tray-transparent = false
-# tray-background = 
+; tray-background = 
 tray-scale = 1.0
 
 ;-----------------;
@@ -101,8 +103,8 @@ wrapping-scroll = false
 enable-click = true
 enable-scroll = true
 strip-wsnumbers = true
-# pin-workspaces = true
-# index-sort = false
+; pin-workspaces = true
+; index-sort = false
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -115,12 +117,12 @@ ws-icon-6 = 7;
 
 label-focused = %icon% %name%
 label-focused-foreground = ${colors.highlight}
-# label-focused-underline = ${colors.foreground}
+; label-focused-underline = ${colors.foreground}
 label-urgent-foreground = ${colors.alert}
 
-# label-unfocused = %name%
-# label-focused-padding = 0
-# label-unfocused-padding = 0
+; label-unfocused = %name%
+; label-focused-padding = 0
+; label-unfocused-padding = 0
 
 label-separator = |
 label-separator-padding = 0
@@ -135,10 +137,10 @@ type = internal/xwindow
 
 ; Available tags:
 ;   <label> (default)
-format = | <label>
-# format-background = 
-# format-foreground = #000000000000
-# format-padding = 2
+format = <label>
+; format-background = 
+; format-foreground = ;000000000000
+; format-padding = 2
 
 ; Available tokens:
 ;   %title%
@@ -150,7 +152,7 @@ label-maxlen = 100
 type = internal/date
 interval = 1.0
 time = %H:%M
-# time-alt  = Larga a porra do mouse
+; time-alt  = Larga a porra do mouse
 date = %a %b %d
 label = %date% %time%
 
@@ -163,7 +165,7 @@ full-at = 100
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
-# animation-charging-framerate = 350
+; animation-charging-framerate = 350
 
 
 format-discharging = <ramp-capacity><label-discharging> 
@@ -203,31 +205,37 @@ format-spacing = 5
 type = internal/network
 interface = enp2s0
 interval = 1.0
-
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-
 format-connected-prefix = " "
 format-disconnected-prefix = " "
-
-label-connected =  "Conectado"
-label-disconnected = "Desconectado"
-
+label-connected =  "Cabo conectado"
+; label-disconnected = "Cabo desconectado"
 format-connected-prefix-foreground = ${colors.highlight}
 format-disconnected-prefix-foreground = ${colors.alert}
 
+[module/wireless-network]
+type = internal/network
+interface =  wlp1s0
+
+format-connected = <label-connected>
+format-connected-prefix = " " 
+label-connected = %essid% 
+label-connected-foreground = ${colors.foreground}
+format-disconnected = <label-disconnected>
+label-disconnected = wifi desconectado
+label-disconnected-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.highlight}
 
 [module/volume]
 type = internal/alsa
-
 master-soundcard = default
 speaker-soundcard = default
 headphone-soundcard = default
 
-
-format-volume = Volume <bar-volume> <label-volume> 
+format-volume = <bar-volume> 
 format-muted = <label-muted>
-l
+format-volume-prefix = " "
 label-muted = Volume mudo
 ramp-volume-0 =  
 ramp-volume-1 =  
@@ -236,15 +244,16 @@ ramp-volume-3 = 
 format-foreground = ${colors.highlight}
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #B2535B
+bar-volume-foreground-0 = ${colors.highlight}
+bar-volume-foreground-1 = ${colors.highlight}
+bar-volume-foreground-2 = ${colors.highlight}
+bar-volume-foreground-3 = ${colors.highlight}
+bar-volume-foreground-4 = ${colors.highlight}
+bar-volume-foreground-5 = ${colors.highlight}
+bar-volume-foreground-6 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
+bar-volume-indicator-foreground = ${colors.highlight}
 bar-volume-indicator-font = 4
 bar-volume-fill = 
 bar-volume-fill-font = 4
@@ -259,18 +268,17 @@ output = eDP1
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
-format = Brilho <bar>
-# label = " " 
-label-foreground = %{colors.primary}
-
+format = <bar>
+format-prefix = " "
+format-prefix-foreground = ${colors.highlight}
 bar-width = 10
 bar-indicator = |
-bar-indicator-foreground = ${colors.primary}
+bar-indicator-foreground = ${colors.highlight}
 bar-indicator-font = 4
-bar-fill = 
+bar-fill =  
 bar-fill-font = 4
-bar-fill-foreground = #9f78e1
-bar-empty = 
+bar-fill-foreground = ${colors.highlight}
+bar-empty =  
 bar-empty-font = 4
 bar-empty-foreground = ${colors.foreground-alt}
 
@@ -286,5 +294,5 @@ format-foreground = ${colors.alert}
 format-padding = 1
 click-left = exec pamac-updater
 
-# label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
-# label = %{A1:pamac-manager & disown:} %output%%{A} %{A}
+; label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
+; label = %{A1:pamac-manager & disown:} %output%%{A} %{A}
