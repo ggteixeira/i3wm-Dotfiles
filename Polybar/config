@@ -81,6 +81,7 @@ override-redirect = false
 padding-left = 2
 padding-right = 2
 screenchange-reload = true
+locale = pt_BR.UTF-8
 
 ;--------------------;
 ; TRAY ICONS ;
@@ -153,8 +154,8 @@ type = internal/date
 interval = 1.0
 time = %H:%M
 ; time-alt  = Larga a porra do mouse
-date = %a %b %d
-label = |   %date% %time%
+date = %A, %d de %B
+label = |  %date%   %time%
 
 [module/battery]
 type = internal/battery
