@@ -59,6 +59,14 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
+#Volume controls:
+
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer sset Master 5%- unmute
+bindsym XF86AudioMute exec amixer sset Master toggle
+
+# bindsym AudioLowerVolume
+# bindsym AudioMute
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -167,13 +175,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # set $ws6  
 
 # FontAwesome:
-set $ws1 1: Terminal 
-set $ws2 2: Code
-set $ws3 3: Navegador
-set $ws4 4: Arquivos
-set $ws5 5: Escrita
-set $ws6 6: Spotify
-set $ws7 7: Outer
+set $ws1 1:1 
+set $ws2 2:2 
+set $ws3 3:3 
+set $ws4 4:4 
+set $ws5 5:5 
+set $ws6 6:6 
+set $ws7 7:7 
+set $ws8 8:8
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -322,6 +331,8 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id redshift
+# exec --no-startup-id dropbox
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
