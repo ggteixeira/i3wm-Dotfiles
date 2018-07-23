@@ -78,8 +78,8 @@ modules-left = title
 modules-center = i3
 modules-right = pkg backlight volume memory battery date  
 override-redirect = false
-padding-left = 3
-padding-right = 3
+padding-left = 2
+padding-right = 2
 screenchange-reload = true
 
 ;--------------------;
@@ -139,7 +139,7 @@ type = internal/xwindow
 ;   <label> (default)
 format = <label>
 ; format-background = 
-format-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground}
 ; format-padding = 2
 
 ; Available tokens:
@@ -154,7 +154,7 @@ interval = 1.0
 time = %H:%M
 ; time-alt  = Larga a porra do mouse
 date = %a %b %d
-label = %date% %time%
+label = |   %date% %time%
 
 [module/battery]
 type = internal/battery
@@ -290,8 +290,9 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = 
-format-foreground = ${colors.highlight}
+format = Atualizações Disponíveis
+format-prefix =" "
+format-prefix-foreground = ${colors.highlight}
 format-padding = 1
 click-left = exec pamac-updater
 
