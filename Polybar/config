@@ -4,20 +4,23 @@
 ;  
 ;========================================
 
-[colors]
-background = #2B2C2B
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #a6a6a6
-highlight = #268BD2
-primary = #ffb52a
-secondary = #e60053
-alert = #E5201D
+###
 
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+background-alt = #444
+highlight = #268BD2
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+# alert = ${xrdb:color3:#222}
+alert = #FFA500
 ;------------------------;
 ; POLYBAR/TOP  ;
 ;-----------------------;
 [bar/main]
+
 line-size = 3
 ; line-color = #f00
 border-size = 0
@@ -74,8 +77,8 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = title
-modules-center = i3
+modules-left = i3 title
+modules-center = 
 modules-right = pkg backlight volume memory battery date  
 override-redirect = false
 padding-left = 2
@@ -117,7 +120,8 @@ ws-icon-6 = 7
 
 
 label-focused = %icon% %name%
-label-focused-foreground = ${colors.highlight}
+label-focused-foreground = ${colors.foreground}
+label-unfocused-foreground = ${colors.primary}
 ; label-focused-underline = ${colors.foreground}
 label-urgent-foreground = ${colors.alert}
 
@@ -154,7 +158,7 @@ type = internal/date
 interval = 1.0
 time = %H:%M
 ; time-alt  = Larga a porra do mouse
-date = %A, %d de %B
+date = %a, %d de %B
 label = |  %date%   %time%
 
 [module/battery]
@@ -165,7 +169,7 @@ full-at = 99
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
-format-charging-foreground = #a3c725
+format-charging-foreground = ${colors.foreground}
 ; animation-charging-framerate = 350
 
 
@@ -184,10 +188,10 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-0-foreground = ${colors.alert}
-ramp-capacity-1-foreground = ${colors.highlight}
-ramp-capacity-2-foreground = ${colors.highlight}
-ramp-capacity-3-foreground = ${colors.highlight}
-ramp-capacity-4-foreground = ${colors.highlight}
+ramp-capacity-1-foreground = ${colors.foreground}
+ramp-capacity-2-foreground = ${colors.foreground}
+ramp-capacity-3-foreground = ${colors.foreground}
+ramp-capacity-4-foreground = ${colors.foreground
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -201,7 +205,7 @@ interval = 3
 label = %percentage_used%%
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${colors.highlight}
+format-prefix-foreground = ${colors.foreground}
 
 format-spacing = 5
 
@@ -245,25 +249,25 @@ ramp-volume-0 = 
 ramp-volume-1 =  
 ramp-volume-2 =  
 ramp-volume-3 = 
-format-volume-prefix-foreground = ${colors.highlight}
+format-volume-prefix-foreground = ${colors.foreground}
 
 bar-volume-width = 5
-bar-volume-foreground-0 = ${colors.highlight}
-bar-volume-foreground-1 = ${colors.highlight}
-bar-volume-foreground-2 = ${colors.highlight}
-bar-volume-foreground-3 = ${colors.highlight}
-bar-volume-foreground-4 = ${colors.highlight}
-bar-volume-foreground-5 = ${colors.highlight}
-bar-volume-foreground-6 = ${colors.alert}
+bar-volume-foreground-0 = ${colors.foreground}
+bar-volume-foreground-1 = ${colors.foreground}
+bar-volume-foreground-2 = ${colors.foreground}
+bar-volume-foreground-3 = ${colors.foreground}
+bar-volume-foreground-4 = ${colors.foreground}
+bar-volume-foreground-5 = ${colors.foreground}
+bar-volume-foreground-6 = ${colors.foreground}
 bar-volume-gradient = false
 bar-volume-indicator =  
-bar-volume-indicator-foreground = ${colors.highlight}
+bar-volume-indicator-foreground = ${colors.primary}
 bar-volume-indicator-font = 4
 bar-volume-fill = 
 bar-volume-fill-font = 4
 bar-volume-empty = 
 bar-volume-empty-font = 4
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.primary}
 
 [module/backlight]
 type = internal/xbacklight
@@ -273,17 +277,17 @@ output = eDP1
 card = intel_backlight
 format = <bar>
 format-prefix = " "
-format-prefix-foreground = ${colors.highlight}
+format-prefix-foreground = ${colors.foreground}
 bar-width = 5
 bar-indicator = 
-bar-indicator-foreground = ${colors.highlight}
+bar-indicator-foreground = ${colors.foreground}
 bar-indicator-font = 4
 bar-fill =  
 bar-fill-font = 4
-bar-fill-foreground = ${colors.highlight}
+bar-fill-foreground = ${colors.foreground}
 bar-empty =  
 bar-empty-font = 4
-bar-empty-foreground = ${colors.foreground-alt}
+bar-empty-foreground = ${colors.primary}
 
 [module/pkg]
 type = custom/script
@@ -291,9 +295,9 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = Atualizações Disponíveis
+format = Atualizações 
 format-prefix =" "
-format-prefix-foreground = ${colors.highlight}
+format-prefix-foreground = ${colors.foreground}
 format-padding = 1
 click-left = exec pamac-updater
 
