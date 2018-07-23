@@ -75,8 +75,8 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3 title
-modules-center =
-modules-right = pkg wired-network wireless-network backlight volume battery date
+modules-center = date
+modules-right = pkg backlight volume memory battery  
 override-redirect = false
 padding-left = 3
 padding-right = 3
@@ -124,7 +124,7 @@ label-urgent-foreground = ${colors.alert}
 ; label-focused-padding = 0
 ; label-unfocused-padding = 0
 
-label-separator = |
+label-separator =|
 label-separator-padding = 0
 label-separator-foreground = ${colors.background}
 
@@ -139,7 +139,7 @@ type = internal/xwindow
 ;   <label> (default)
 format = <label>
 ; format-background = 
-; format-foreground = ;000000000000
+format-foreground = ${colors.foreground-alt}
 ; format-padding = 2
 
 ; Available tokens:
@@ -160,19 +160,20 @@ label = %date% %time%
 type = internal/battery
 battery = BAT1
 adapter = AC
-full-at = 98
+full-at = 99
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
-format-charging-foreground = ${colors.foreground}
+format-charging-foreground = #a3c725
 ; animation-charging-framerate = 350
 
 
-format-discharging = <ramp-capacity><label-discharging> 
+format-discharging = <ramp-capacity><label-discharging>
 label-discharging =  %percentage%%
 format-charging-spacing = 1
 format-discharging-spacing = 1
 
+label-full = %percentage%%
 format-full-prefix = " "
 format-full-prefix-foreground = #a3c725
 
@@ -182,14 +183,16 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-0-foreground = ${colors.alert}
-ramp-capacity-1-foreground = #c7ae25
+ramp-capacity-1-foreground = ${colors.highlight}
+ramp-capacity-2-foreground = ${colors.highlight}
+ramp-capacity-3-foreground = ${colors.highlight}
+ramp-capacity-4-foreground = ${colors.highlight}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-
 
 [module/memory]
 type = internal/memory
@@ -207,12 +210,12 @@ interface = enp2s0
 interval = 1.0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-format-connected-prefix = " "
-format-disconnected-prefix = " "
-label-connected =  "Conectado"
-label-disconnected = "Desconectado"
-format-connected-prefix-foreground = ${colors.highlight}
-format-disconnected-prefix-foreground = ${colors.alert}
+;format-connected-prefix = " "
+;format-disconnected-prefix = " "
+label-connected =  
+label-disconnected = 
+format-connected-foreground = ${colors.highlight}
+format-disconnected-foreground = ${colors.foreground}
 
 [module/wireless-network]
 type = internal/network
@@ -243,7 +246,7 @@ ramp-volume-2 = 
 ramp-volume-3 = 
 format-volume-prefix-foreground = ${colors.highlight}
 
-bar-volume-width = 10
+bar-volume-width = 5
 bar-volume-foreground-0 = ${colors.highlight}
 bar-volume-foreground-1 = ${colors.highlight}
 bar-volume-foreground-2 = ${colors.highlight}
@@ -252,7 +255,7 @@ bar-volume-foreground-4 = ${colors.highlight}
 bar-volume-foreground-5 = ${colors.highlight}
 bar-volume-foreground-6 = ${colors.alert}
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator =  
 bar-volume-indicator-foreground = ${colors.highlight}
 bar-volume-indicator-font = 4
 bar-volume-fill = 
@@ -260,7 +263,6 @@ bar-volume-fill-font = 4
 bar-volume-empty = 
 bar-volume-empty-font = 4
 bar-volume-empty-foreground = ${colors.foreground-alt}
-
 
 [module/backlight]
 type = internal/xbacklight
@@ -271,8 +273,8 @@ card = intel_backlight
 format = <bar>
 format-prefix = " "
 format-prefix-foreground = ${colors.highlight}
-bar-width = 10
-bar-indicator = |
+bar-width = 5
+bar-indicator = 
 bar-indicator-foreground = ${colors.highlight}
 bar-indicator-font = 4
 bar-fill =  
@@ -281,7 +283,6 @@ bar-fill-foreground = ${colors.highlight}
 bar-empty =  
 bar-empty-font = 4
 bar-empty-foreground = ${colors.foreground-alt}
-
 
 [module/pkg]
 type = custom/script
