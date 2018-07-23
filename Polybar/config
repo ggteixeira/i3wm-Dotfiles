@@ -74,9 +74,9 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3 title
-modules-center = date
-modules-right = pkg backlight volume memory battery  
+modules-left = title
+modules-center = i3
+modules-right = pkg backlight volume memory battery date  
 override-redirect = false
 padding-left = 3
 padding-right = 3
@@ -146,7 +146,7 @@ format-foreground = ${colors.foreground-alt}
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 50
+label-maxlen = 70
 
 [module/date]
 type = internal/date
