@@ -47,7 +47,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ###########################################################################################
 
-exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # exec --no-startup-id pulseaudio
 # exec --no-startup-id pa-applet
@@ -61,8 +61,8 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 
 #Volume controls:
 
-bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer sset Master 5%- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- unmute
 bindsym XF86AudioMute exec amixer sset Master toggle
 
 # bindsym AudioLowerVolume
@@ -152,27 +152,6 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
-# to display names or symbols instead of plain workspace numbers you can use
-# something like: set $ws1 1:mail
-#                 set $ws2 2:
-
-# set $ws1 1:1:
-
-#set $ws1 "1: Terminal" 
-#set $ws2 "2: Code"
-#set $ws3 "3: Navegador"
-#set $ws4 "4: Explorer"
-#set $ws5 "5: Escrita"
-#set $ws6 "6: Spotify" 
-#set $ws7 "7:   Outer"
-
-# IcoMoon:
-# set $ws1  
-# set $ws2  
-# set $ws3  
-# set $ws4  
-# set $ws5  
-# set $ws6  
 
 # FontAwesome:
 set $ws1 1:1 
@@ -194,19 +173,12 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
-# Apps iniciados com o sistema:
-# exec termite 
-# exec code
-# exec palemoon
-# exec pcmanfm
-# exec typora
-# exec spotify
-
 # Iniciando apps em workspaces específicos:
 assign [class="Termite"] $ws1
 assign [class="Code"] $ws2
 assign [class="Chromium"] $ws3
 assign [class="Pcmanfm"] $ws4
+assign [class="Simplenote"] $ws5
 assign [class="Spotify"] $ws6
 
 # Move focused container to workspace
@@ -321,7 +293,7 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+# exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb

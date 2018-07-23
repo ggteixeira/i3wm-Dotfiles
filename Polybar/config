@@ -75,12 +75,12 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3 title
-modules-center = date
-modules-right = pkg wired-network wireless-network backlight volume battery 
+modules-center =
+modules-right = pkg wired-network wireless-network backlight volume battery date
 override-redirect = false
 padding-left = 3
 padding-right = 3
-screenchange-reload = false
+screenchange-reload = true
 
 ;--------------------;
 ; TRAY ICONS ;
@@ -290,7 +290,7 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
 format = 
-format-foreground = ${colors.alert}
+format-foreground = ${colors.highlight}
 format-padding = 1
 click-left = exec pamac-updater
 
