@@ -67,7 +67,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.rendererType": "dom",
     "terminal.integrated.fontFamily": "monospace",
-    "workbench.colorTheme": "One Dark Pro Vivid",
-    "color-highlight.markerType": "dot-after",    
+    "color-highlight.markerType": "dot-after",
+    "workbench.colorTheme": "One Dark Pro",    
     
 }
