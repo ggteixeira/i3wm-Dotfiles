@@ -1,6 +1,6 @@
 ;========================================	
 ; 	
-;                 P     O     L     Y     B     A     R
+; P     O     L     Y     B     A     R
 ;  
 ;========================================
 
@@ -32,9 +32,10 @@ module-margin-right = 2
 ; DIMENSIONS ;
 ;--------------------;
 width = 100%
-height = 20
+height = 21
 offset-y = 0
 offset-x = 0
+
 
 ;border-top-size = 3
 ;border-bottom-size = 5
@@ -121,7 +122,7 @@ ws-icon-6 = 7
 
 label-focused = %icon% %name%
 label-focused-foreground = ${colors.foreground}
-label-unfocused-foreground = ${colors.primary}
+label-unfocused-foreground = ${colors.secondary}
 ; label-focused-underline = ${colors.foreground}
 label-urgent-foreground = ${colors.alert}
 
@@ -130,7 +131,7 @@ label-urgent-foreground = ${colors.alert}
 ; label-unfocused-padding = 0
 
 label-separator =|
-label-separator-padding = 0
+label-separator-padding = 1
 label-separator-foreground = ${colors.background}
 
 label-visible = %index%
@@ -159,7 +160,7 @@ interval = 1.0
 time = %H:%M
 ; time-alt  = Larga a porra do mouse
 date = %a, %d de %B
-label = |  %date%   %time%
+label = %date%   %time%
 
 [module/battery]
 type = internal/battery
@@ -170,17 +171,19 @@ full-at = 99
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
-; animation-charging-framerate = 350
+animation-charging-framerate = 500
 
 
 format-discharging = <ramp-capacity><label-discharging>
 label-discharging =  %percentage%%
 format-charging-spacing = 1
 format-discharging-spacing = 1
+label-discharging-foreground = ${colors.foreground}
 
 label-full = %percentage%%
 format-full-prefix = " "
-format-full-prefix-foreground = #a3c725
+format-full-prefix-foreground = ${colors.secondary}
+format-full-foreground = ${colors.secondary}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -191,7 +194,7 @@ ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1-foreground = ${colors.foreground}
 ramp-capacity-2-foreground = ${colors.foreground}
 ramp-capacity-3-foreground = ${colors.foreground}
-ramp-capacity-4-foreground = ${colors.foreground
+ramp-capacity-4-foreground = ${colors.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -206,6 +209,7 @@ label = %percentage_used%%
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
+label-foreground = ${colors.foreground}
 
 format-spacing = 5
 
@@ -261,13 +265,13 @@ bar-volume-foreground-5 = ${colors.foreground}
 bar-volume-foreground-6 = ${colors.foreground}
 bar-volume-gradient = false
 bar-volume-indicator =  
-bar-volume-indicator-foreground = ${colors.primary}
+bar-volume-indicator-foreground = ${colors.foreground}
 bar-volume-indicator-font = 4
 bar-volume-fill = 
 bar-volume-fill-font = 4
 bar-volume-empty = 
 bar-volume-empty-font = 4
-bar-volume-empty-foreground = ${colors.primary}
+bar-volume-empty-foreground = ${colors.secondary}
 
 [module/backlight]
 type = internal/xbacklight
@@ -287,7 +291,7 @@ bar-fill-font = 4
 bar-fill-foreground = ${colors.foreground}
 bar-empty =  
 bar-empty-font = 4
-bar-empty-foreground = ${colors.primary}
+bar-empty-foreground = ${colors.secondary}
 
 [module/pkg]
 type = custom/script
@@ -295,9 +299,10 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = Atualizações 
+format = Atualizações disponíveis 
 format-prefix =" "
 format-prefix-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
 format-padding = 1
 click-left = exec pamac-updater
 
