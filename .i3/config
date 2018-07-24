@@ -33,6 +33,12 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
+# start and redshift
+
+bindsym $mod+Shift+f exec --no-startup-id redshift
+bindsym Shift+f exec --no-startup-id pkill redshift
+
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
