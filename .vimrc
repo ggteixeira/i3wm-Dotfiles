@@ -65,8 +65,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'powerline/powerline'
 
-let g:airline_solarized_bg='dark'
-let g:airline_theme='deus'
+" let g:airline_solarized_bg='dark'
+let g:airline_theme='wal'
 let g:airline_powerline_fonts = 1 
 
 " ==== lints
