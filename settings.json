@@ -61,7 +61,7 @@
     ],
     "update.channel": "none",
     "python.venvPath": "/home/guiemi/Dropbox/programacao/python/python-exercises/django/venv/bin/python3",
-    "python.pythonPath": "",
+    "python.pythonPath": "/usr/bin/python",
     "explorer.confirmDragAndDrop": false,
     "window.menuBarVisibility": "toggle",
     "workbench.startupEditor": "newUntitledFile",
