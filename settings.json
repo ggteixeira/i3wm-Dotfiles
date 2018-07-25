@@ -68,6 +68,5 @@
     "terminal.integrated.rendererType": "dom",
     "terminal.integrated.fontFamily": "monospace",
     "color-highlight.markerType": "dot-after",
-    "workbench.colorTheme": "One Dark Pro",    
-    
+    "workbench.colorTheme": "Plastic",    
 }
