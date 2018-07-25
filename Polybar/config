@@ -51,10 +51,11 @@ bottom = true
 ; FONTS ;
 ;-----------;
 
-font-0 = "Noto Sans:pixelsize=9;2"
-font-1 = "Font Awesome:style=Regular:pixelsize=11;2"
-font-2 = "icomoon:size=11:Style=Regular;5"
-font-3 = "Font Awesome 5 Free:style:Regular"
+font-0 = "Noto Sans:style:Regular:pixelsize=9;2"
+font-1 = "Iosevka:style:Regular:pixelsize=9;2"
+font-2 = "Font Awesome:style=Regular:pixelsize=11;2"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=11;2"
+font-4 = "icomoon:size=11:style=Regular;5"
 
 
 ;---------------;
@@ -78,12 +79,12 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = title
-modules-center = i3
-modules-right = pkg backlight volume memory battery date  
+modules-left = i3
+modules-center =
+modules-right = pkg memory backlight volume  battery date  
 override-redirect = false
-padding-left = 2
-padding-right = 2
+padding-left = 1
+padding-right = 1
 screenchange-reload = true
 locale = pt_BR.UTF-8
 
@@ -131,7 +132,7 @@ label-urgent-foreground = ${colors.alert}
 ; label-unfocused-padding = 0
 
 label-separator =|
-label-separator-padding = 1
+label-separator-padding = 0
 label-separator-foreground = ${colors.background}
 
 label-visible = %index%
@@ -152,7 +153,7 @@ format-foreground = ${colors.foreground}
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 70
+label-maxlen = 100
 
 [module/date]
 type = internal/date
@@ -245,17 +246,22 @@ master-soundcard = default
 speaker-soundcard = default
 headphone-soundcard = default
 
-format-volume = <bar-volume> 
+format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
 format-muted = <label-muted>
 format-volume-prefix = " "
+
+format-muted-prefix = " "
+format-muted-prefix-foreground = ${colors.alert}
 label-muted = Volume mudo
+
 ramp-volume-0 =  
 ramp-volume-1 =  
 ramp-volume-2 =  
 ramp-volume-3 = 
 format-volume-prefix-foreground = ${colors.foreground}
 
-bar-volume-width = 5
+bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.foreground}
 bar-volume-foreground-1 = ${colors.foreground}
 bar-volume-foreground-2 = ${colors.foreground}
@@ -264,12 +270,12 @@ bar-volume-foreground-4 = ${colors.foreground}
 bar-volume-foreground-5 = ${colors.foreground}
 bar-volume-foreground-6 = ${colors.foreground}
 bar-volume-gradient = false
-bar-volume-indicator =  
+bar-volume-indicator = ∣
 bar-volume-indicator-foreground = ${colors.foreground}
 bar-volume-indicator-font = 4
-bar-volume-fill = 
+bar-volume-fill = ―
 bar-volume-fill-font = 4
-bar-volume-empty = 
+bar-volume-empty = ―
 bar-volume-empty-font = 4
 bar-volume-empty-foreground = ${colors.secondary}
 
@@ -279,19 +285,24 @@ output = eDP1
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
-format = <bar>
+format = <label> <bar> 
+label = %percentage%%
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-bar-width = 5
-bar-indicator = 
+
+bar-width = 10
+bar-indicator = ∣
 bar-indicator-foreground = ${colors.foreground}
-bar-indicator-font = 4
-bar-fill =  
+bar-indicator-font = 10
+bar-fill = ―
 bar-fill-font = 4
 bar-fill-foreground = ${colors.foreground}
-bar-empty =  
+bar-empty = ―
 bar-empty-font = 4
 bar-empty-foreground = ${colors.secondary}
+
+label-active-font = 2
+――——––
 
 [module/pkg]
 type = custom/script
