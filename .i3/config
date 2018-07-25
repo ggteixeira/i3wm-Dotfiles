@@ -36,7 +36,7 @@ bindsym $mod+Return exec termite
 # start and redshift
 
 bindsym $mod+Shift+f exec --no-startup-id redshift
-bindsym Shift+f exec --no-startup-id pkill redshift
+# bindsym Shift+f exec --no-startup-id pkill redshift
 
 
 # kill focused window
@@ -64,14 +64,14 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ############################################################################################
 
 # Screen brightness controls:
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; notify-send"
 
 #Volume controls:
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 10%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 10%- unmute
-bindsym XF86AudioMute exec amixer --no-startup-id sset Master toggle
+bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
 
 # bindsym AudioLowerVolume
 # bindsym AudioMute
@@ -374,7 +374,7 @@ set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  #268BD2       $bg
+client.focused          $bg     $bg     $fg  #f0f0f0       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
