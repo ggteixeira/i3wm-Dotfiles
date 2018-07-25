@@ -47,7 +47,7 @@ offset-x = 0
 ;-----------------;
 ; LOCATION ;
 ;----------------;
-bottom = true
+bottom = false
 
 ;-------------;
 ; FONTS ;
