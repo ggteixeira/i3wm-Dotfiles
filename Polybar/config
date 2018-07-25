@@ -16,18 +16,20 @@ primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 # alert = ${xrdb:color3:#222}
 alert = #FFA500
+
 ;------------------------;
 ; POLYBAR/TOP  ;
 ;-----------------------;
+
 [bar/main]
 
 line-size = 3
-; line-color = #f00
 border-size = 0
-border-color = #00000000
+;border-color = #00000000
 module-margin-left = 2
 module-margin-right = 2
 ; separator = |
+
 ;---------------------;
 ; DIMENSIONS ;
 ;--------------------;
@@ -80,10 +82,10 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3
-modules-center =
-modules-right = pkg memory backlight volume  battery date  
+modules-center = date
+modules-right = pkg volume backlight memory battery  
 override-redirect = false
-padding-left = 1
+padding-left = 2
 padding-right = 1
 screenchange-reload = true
 locale = pt_BR.UTF-8
@@ -96,7 +98,7 @@ tray-position = right
 tray-detached = false
 tray-maxsize = 19
 tray-transparent = false
-; tray-background = 
+tray-background = ${colors.background}
 tray-scale = 1.0
 
 ;-----------------;
@@ -105,11 +107,10 @@ tray-scale = 1.0
 [module/i3]
 type = internal/i3
 format = <label-state><label-mode>
-wrapping-scroll = false
+;wrapping-scroll = true
 enable-click = true
 enable-scroll = false
 strip-wsnumbers = true
-; pin-workspaces = true
 ; index-sort = false
 
 ws-icon-0 = 1
@@ -120,14 +121,11 @@ ws-icon-4 = 5
 ws-icon-5 = 6
 ws-icon-6 = 7
 
-
 label-focused = %icon% %name%
 label-focused-foreground = ${colors.foreground}
 label-unfocused-foreground = ${colors.secondary}
-; label-focused-underline = ${colors.foreground}
 label-urgent-foreground = ${colors.alert}
 
-; label-unfocused = %name%
 ; label-focused-padding = 0
 ; label-unfocused-padding = 0
 
@@ -135,9 +133,7 @@ label-separator =|
 label-separator-padding = 0
 label-separator-foreground = ${colors.background}
 
-label-visible = %index%
-label-visible-underline = ${colors.highlight}
-label-visible-padding = 4
+
 
 [module/title]
 type = internal/xwindow
@@ -206,13 +202,14 @@ animation-charging-4 = 
 [module/memory]
 type = internal/memory
 interval = 3
-label = %percentage_used%%
 format = <label>
-format-prefix = " "
+label = %percentage_used%%
+;label = %gb_used% - %gb_total% (%percentage_used%%)
+format-prefix = " " 
+
+
 format-prefix-foreground = ${colors.foreground}
 label-foreground = ${colors.foreground}
-
-format-spacing = 5
 
 [module/wired-network]
 type = internal/network
@@ -251,9 +248,10 @@ label-volume = %percentage%%
 format-muted = <label-muted>
 format-volume-prefix = " "
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-prefix-foreground = ${colors.alert}
-label-muted = Volume mudo
+label-muted = 0% Volume mudo
+label-muted-foreground = ${colors.alert}
 
 ramp-volume-0 =  
 ramp-volume-1 =  
@@ -279,6 +277,8 @@ bar-volume-empty = ―
 bar-volume-empty-font = 4
 bar-volume-empty-foreground = ${colors.secondary}
 
+label-active-font = 2
+
 [module/backlight]
 type = internal/xbacklight
 output = eDP1
@@ -302,7 +302,6 @@ bar-empty-font = 4
 bar-empty-foreground = ${colors.secondary}
 
 label-active-font = 2
-――——––
 
 [module/pkg]
 type = custom/script
@@ -310,11 +309,10 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = Atualizações disponíveis 
+format = Atualizações 
 format-prefix =" "
 format-prefix-foreground = ${colors.foreground}
 format-foreground = ${colors.foreground}
-format-padding = 1
 click-left = exec pamac-updater
 
 ; label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
