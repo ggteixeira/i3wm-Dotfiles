@@ -23,7 +23,7 @@ alert = #FFA500
 
 [bar/main]
 
-line-size = 3
+line-size = 1
 border-size = 0
 ;border-color = #00000000
 module-margin-left = 2
@@ -34,10 +34,9 @@ module-margin-right = 2
 ; DIMENSIONS ;
 ;--------------------;
 width = 100%
-height = 21
+height = 19
 offset-y = 0
 offset-x = 0
-
 
 ;border-top-size = 3
 ;border-bottom-size = 5
@@ -81,12 +80,12 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3
+modules-left = i3 xwindow 
 modules-center = date
-modules-right = pkg volume backlight memory battery  
+modules-right = keyboard pkg volume backlight memory battery
 override-redirect = false
-padding-left = 2
-padding-right = 1
+padding-left = 0
+padding-right = 0
 screenchange-reload = true
 locale = pt_BR.UTF-8
 
@@ -123,33 +122,34 @@ ws-icon-6 = 7
 
 label-focused = %icon% %name%
 label-focused-foreground = ${colors.foreground}
+label-focused-padding = 1
+;label-focused-underline = ${colors.foreground}
+
 label-unfocused-foreground = ${colors.secondary}
+label-unfocused-padding = 1
+
 label-urgent-foreground = ${colors.alert}
 
-; label-focused-padding = 0
-; label-unfocused-padding = 0
+label-mode = %mode%
+label-mode-foreground = ${colors.alert}
+label-mode-background = ${colors.primary}
+label-mode-padding = 1
 
-label-separator =|
-label-separator-padding = 0
-label-separator-foreground = ${colors.background}
+;label-separator =|
+;label-separator-padding = 0
+;label-separator-foreground = ${colors.background}
 
 
-
-[module/title]
+[module/xwindow]
 type = internal/xwindow
 
-; Available tags:
-;   <label> (default)
 format = <label>
-; format-background = 
-format-foreground = ${colors.foreground}
-; format-padding = 2
 
-; Available tokens:
-;   %title%
-; Default: %title%
 label = %title%
-label-maxlen = 100
+label-maxlen = 65
+
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
@@ -317,3 +317,12 @@ click-left = exec pamac-updater
 
 ; label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
 ; label = %{A1:pamac-manager & disown:} %output%%{A} %{A}
+
+[module/keyboard]
+type = internal/xkeyboard
+
+format = <label-indicator>
+
+label-indicator = %name%
+label-indicator-padding = 2
+label-indicator-background = ${colors.primary}
