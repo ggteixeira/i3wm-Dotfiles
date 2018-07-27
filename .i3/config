@@ -62,7 +62,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Screen brightness controls:
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; notify-send"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
 
 #Volume controls:
 
@@ -371,7 +371,7 @@ set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  #f0f0f0       $bg
+client.focused          $bg     $bg     $fg  #f0f0f0 $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
@@ -389,8 +389,8 @@ client.background       $bg
 
 # Set inner/outer gaps
 
-gaps inner 7
-gaps outer 7
+gaps inner 5
+gaps outer 5
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
