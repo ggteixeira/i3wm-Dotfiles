@@ -81,8 +81,8 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3 xwindow 
-modules-center = date
-modules-right = keyboard pkg volume backlight memory battery
+modules-center = spotify
+modules-right = keyboard pkg volume backlight memory battery date
 override-redirect = false
 padding-left = 0
 padding-right = 0
@@ -326,3 +326,12 @@ format = <label-indicator>
 label-indicator = %name%
 label-indicator-padding = 2
 label-indicator-background = ${colors.primary}
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify_status.py
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
