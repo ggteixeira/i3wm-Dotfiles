@@ -122,18 +122,18 @@ ws-icon-6 = 7
 
 label-focused = %icon% %name%
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 1
+label-focused-padding = 2
 ;label-focused-underline = ${colors.foreground}
 
 label-unfocused-foreground = ${colors.secondary}
-label-unfocused-padding = 1
+label-unfocused-padding = 0
 
 label-urgent-foreground = ${colors.alert}
 
 label-mode = %mode%
 label-mode-foreground = ${colors.alert}
 label-mode-background = ${colors.primary}
-label-mode-padding = 1
+label-mode-padding = 0
 
 ;label-separator =|
 ;label-separator-padding = 0
