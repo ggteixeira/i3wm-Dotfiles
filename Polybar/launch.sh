@@ -8,6 +8,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
 polybar main -r &
-# polybar bottom -r
+polybar bottom -r
 
 # polybar -c /home/guiemi/.config/polybar/config top
