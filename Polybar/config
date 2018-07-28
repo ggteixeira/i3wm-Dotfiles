@@ -81,8 +81,8 @@ fixed-center = true
 radius = 0.0
 
 modules-left = i3 xwindow
-modules-center = date
-modules-right = keyboard pkg memory battery
+modules-center =
+modules-right = keyboard pkg memory battery date
 override-redirect = false
 padding-left = 0
 padding-right = 0
@@ -406,7 +406,7 @@ radius = 0.0
 
 modules-left = spotify
 modules-center =
-modules-right = volume backlight date
+modules-right = volume backlight
 override-redirect = false
 padding-left = 1
 padding-right = 1
