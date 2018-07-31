@@ -65,29 +65,28 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
 
 #Volume controls:
-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 10%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 10%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
 
-# bindsym AudioLowerVolume
-# bindsym AudioMute
-
 # Start Applications
-bindsym $mod+Ctrl+b exec termite -e 'bmenu'
-bindsym $mod+F2 exec chromium
-bindsym $mod+F3 exec pcmanfm
-bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F4 exec termite -e ranger
+bindsym $mod+F1 exec chromium
+bindsym $mod+F3 exec termite -e ranger
+bindsym $mod+F4 exec pcmanfm
+bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F5 exec termite -e 'mocp'
+
+bindsym $mod+Ctrl+b exec termite -e 'bmenu'
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym Print exec --no-startup-id i3-scrot
 
 # focus_follows_mouse no
 
@@ -158,25 +157,14 @@ bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
 
-# FontAwesome:
-#set $ws1 1:I 
-#set $ws2 2:II 
-#set $ws3 3:III 
-#set $ws4 4:IV 
-#set $ws5 5:V 
-#set $ws6 6:VI 
-#set $ws7 7:VII 
-#set $ws8 8:VIII
-
-set $ws1 1:I
-set $ws2 2:II
-set $ws3 3:III
-set $ws4 4:IV
-set $ws5 5:V
-set $ws6 6:VI
-set $ws7 7:VII
-set $ws8 8:VIII
-
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -196,7 +184,9 @@ assign [class="Pcmanfm"] $ws4
 assign [class="Ranger"] $ws4
 assign [class="Simplenote"] $ws5
 assign [class="Typora"] $ws5
-assign [class="Spotify"] $ws6
+for_window [class="Spotify"] move to workspace $ws6
+assign [class="TelegramDesktop"] $ws7
+assign [class="Pamac-manager"] $ws8
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -390,8 +380,8 @@ client.background       $bg
 
 # Set inner/outer gaps
 
-gaps inner 5
-gaps outer 5
+gaps inner 6
+gaps outer 6
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
