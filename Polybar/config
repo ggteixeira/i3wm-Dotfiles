@@ -52,7 +52,7 @@ bottom = false
 ; FONTS ;
 ;-----------;
 
-font-0 = "Noto Sans:style:Regular:pixelsize=8;2"
+font-0 = "Noto Sans:style:Regular:pixelsize=8.5;2"
 font-1 = "Iosevka:style:Regular:pixelsize=9;3"
 font-2 = "Font Awesome:style=Regular:pixelsize=10;3"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=11;2"
@@ -80,9 +80,9 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = xwindow
-modules-center = date
-modules-right = keyboard pkg memory battery
+modules-left = i3 spotify
+modules-center = 
+modules-right = keyboard backlight volume pkg memory battery date
 override-redirect = false
 padding-left = 0
 padding-right = 0
@@ -95,10 +95,10 @@ locale = pt_BR.UTF-8
 
 tray-position = right
 tray-detached = false
-tray-maxsize = 19
+tray-maxsize = 20
 tray-transparent = false
-tray-background = ${colors.background}
-tray-scale = 1.0
+tray-background = ${colors.secondary}
+tray-scale = 1
 
 ;-----------------;
 ; MODULES ;
@@ -107,33 +107,36 @@ tray-scale = 1.0
 type = internal/i3
 format = <label-state><label-mode>
 ;wrapping-scroll = true
-enable-click = true
+enable-click = false
 enable-scroll = false
 strip-wsnumbers = true
 ; index-sort = false
 
-ws-icon-0 = 1
-ws-icon-1 = 2
-ws-icon-2 = 3
-ws-icon-3 = 4
-ws-icon-4 = 5
-ws-icon-5 = 6
-ws-icon-6 = 7
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
 
-label-focused = %icon% %name%
+label-focused = %icon% 
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 1
+label-focused-background = ${colors.secondary}
+label-focused-padding = 2
 ;label-focused-underline = ${colors.foreground}
 
-label-unfocused-foreground = ${colors.secondary}
-label-unfocused-padding = 1
+label-unfocused = %icon%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-padding = 2
 
 label-urgent-foreground = ${colors.alert}
 
-label-mode = %mode%
-label-mode-foreground = ${colors.alert}
-label-mode-background = ${colors.primary}
-label-mode-padding = 1
+;label-mode = %mode%
+;label-mode-foreground = ${colors.alert}
+;label-mode-background = ${colors.primary}
+;label-mode-padding = 1
 
 ;label-separator =|
 ;label-separator-padding = 0
@@ -146,7 +149,7 @@ type = internal/xwindow
 format = <label>
 
 label = %title%
-label-maxlen = 70
+label-maxlen = 80
 
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
@@ -157,7 +160,11 @@ interval = 1.0
 time = %H:%M
 ; time-alt  = Larga a porra do mouse
 date = %a, %d %b
-label = %date%   %time%
+label =  %date%  %time% 
+
+label-foreground = ${colors.foreground}
+label-background = ${colors.secondary}
+label-padding = 2
 
 [module/battery]
 type = internal/battery
@@ -165,10 +172,10 @@ battery = BAT1
 adapter = AC
 full-at = 100
 
-format-charging = <animation-charging><label-charging>
+format-charging =  <animation-charging> <label-charging> (Carregando)
 label-charging = %percentage%%
-format-charging-foreground = ${colors.secondary}
-animation-charging-framerate = 500
+format-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 450
 
 format-discharging = <ramp-capacity><label-discharging>
 label-discharging =  %percentage%%
@@ -308,7 +315,7 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = Atualizações 
+format = Há atualizações
 format-prefix =" "
 format-prefix-foreground = ${colors.foreground}
 format-foreground = ${colors.foreground}
@@ -329,9 +336,9 @@ label-indicator-background = ${colors.primary}
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = "|    "
 format = <label>
-exec = python ~/.config/polybar/scripts/spotify_status.py -t 70
+exec = python ~/.config/polybar/scripts/spotify_status.py -t 40
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 
@@ -345,8 +352,8 @@ format-foreground = ${colors.foreground}
 line-size = 1
 border-size = 0
 ;border-color = #00000000
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 ; separator = |
 
 ;---------------------;
@@ -371,7 +378,7 @@ bottom = true
 ; FONTS ;
 ;-----------;
 
-font-0 = "Noto Sans:style:Regular:pixelsize=8;2"
+font-0 = "Noto Sans:style:Regular:pixelsize=8.5;2"
 font-1 = "Iosevka:style:Regular:pixelsize=9;3"
 font-2 = "Font Awesome:style=Regular:pixelsize=10;3"
 font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=11;2"
@@ -399,11 +406,11 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3
-modules-center = spotify
-modules-right = volume backlight
+modules-left =
+modules-center =
+modules-right = 
 override-redirect = false
-padding-left = 1
+padding-left = 0
 padding-right = 1
 screenchange-reload = true
 locale = pt_BR.UTF-8
