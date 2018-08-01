@@ -15,7 +15,7 @@ highlight = #268BD2
 primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 # alert = ${xrdb:color3:#222}
-alert = #FFA500
+alert = #ff0000
 
 ;------------------------;
 ; POLYBAR/TOP  ;
@@ -34,7 +34,7 @@ module-margin-right = 2
 ; DIMENSIONS ;
 ;--------------------;
 width = 100%
-height = 20
+height = 25
 offset-y = 0
 offset-x = 0
 
@@ -52,10 +52,10 @@ bottom = false
 ; FONTS ;
 ;-----------;
 
-font-0 = "Noto Sans:style:Regular:pixelsize=8.5;2"
+font-0 = "Noto Sans:style:Regular:pixelsize=8.5;3"
 font-1 = "Iosevka:style:Regular:pixelsize=9;3"
 font-2 = "Font Awesome:style=Regular:pixelsize=10;3"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=11;2"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=11;3"
 font-4 = "icomoon:size=11:style=Regular;5"
 
 
@@ -80,11 +80,11 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3 spotify
+modules-left = i3 spotify 
 modules-center = 
-modules-right = keyboard backlight volume pkg memory battery date
+modules-right =  keyboard pkg backlight volume memory battery date
 override-redirect = false
-padding-left = 0
+padding-left = 2
 padding-right = 0
 screenchange-reload = true
 locale = pt_BR.UTF-8
@@ -99,6 +99,7 @@ tray-maxsize = 20
 tray-transparent = false
 tray-background = ${colors.secondary}
 tray-scale = 1
+tray-padding = 1
 
 ;-----------------;
 ; MODULES ;
@@ -129,9 +130,12 @@ label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${colors.background}
 label-unfocused-padding = 2
 
+label-urgent = %icon%
 label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 2
 
 ;label-mode = %mode%
 ;label-mode-foreground = ${colors.alert}
@@ -175,7 +179,7 @@ full-at = 100
 format-charging =  <animation-charging> <label-charging> (Carregando)
 label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 450
+animation-charging-framerate = 700
 
 format-discharging = <ramp-capacity><label-discharging>
 label-discharging =  %percentage%%
@@ -183,16 +187,18 @@ format-charging-spacing = 1
 format-discharging-spacing = 1
 label-discharging-foreground = ${colors.foreground}
 
+format-full = <label-full>
 label-full = %percentage%%
-format-full-prefix = " "
 format-full-prefix-foreground = ${colors.secondary}
 format-full-foreground = ${colors.secondary}
+format-full-prefix = " "
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1-foreground = ${colors.foreground}
 ramp-capacity-2-foreground = ${colors.foreground}
@@ -249,7 +255,7 @@ master-soundcard = default
 speaker-soundcard = default
 headphone-soundcard = default
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <bar-volume>
 label-volume = %percentage%%
 format-muted = <label-muted>
 format-volume-prefix = " "
@@ -274,7 +280,8 @@ bar-volume-foreground-4 = ${colors.foreground}
 bar-volume-foreground-5 = ${colors.foreground}
 bar-volume-foreground-6 = ${colors.foreground}
 bar-volume-gradient = false
-bar-volume-indicator = ∣
+bar-volume-indicator =  
+;   |
 bar-volume-indicator-foreground = ${colors.foreground}
 bar-volume-indicator-font = 4
 bar-volume-fill = ―
@@ -291,13 +298,13 @@ output = eDP1
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
-format = <label> <bar> 
+format = <bar> 
 label = %percentage%%
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 bar-width = 10
-bar-indicator = ∣
+bar-indicator =
 bar-indicator-foreground = ${colors.foreground}
 bar-indicator-font = 10
 bar-fill = ―
@@ -336,11 +343,12 @@ label-indicator-background = ${colors.primary}
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = "|    "
+format-prefix = "  "
 format = <label>
 exec = python ~/.config/polybar/scripts/spotify_status.py -t 40
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
+format-padding = 2
 
 
 ###################################

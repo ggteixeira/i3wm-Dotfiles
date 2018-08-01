@@ -65,8 +65,8 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
 
 #Volume controls:
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 10%+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 10%- unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
 
 # Start Applications
@@ -184,7 +184,7 @@ assign [class="Pcmanfm"] $ws4
 assign [class="Ranger"] $ws4
 assign [class="Simplenote"] $ws5
 assign [class="Typora"] $ws5
-for_window [class="Spotify"] move to workspace $ws6
+assign [class="Spotify"] $ws6
 assign [class="TelegramDesktop"] $ws7
 assign [class="Pamac-manager"] $ws8
 
@@ -380,8 +380,8 @@ client.background       $bg
 
 # Set inner/outer gaps
 
-gaps inner 6
-gaps outer 6
+gaps inner 7
+gaps outer 7
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
