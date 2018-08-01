@@ -2,6 +2,8 @@
 
 ### **VIM**
 
+![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
+
 - **Plugins instalados:**
   - [Vundle](https://github.com/VundleVim/Vundle.vim)
   - [Auto Pairs](https://github.com/jiangmiao/auto-pairs)
@@ -13,11 +15,13 @@
   - [Python-mode](https://github.com/python-mode/python-mode)
   - [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
 
-![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
+
 
 ------
 
 ### **Visual Studio Code:**
+
+![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/vscode-readme.png)
 
 - **Extensões instaladas:**
   - [Atom Keymap (keymap)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
@@ -29,10 +33,6 @@
   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) (keymap)
 
-![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/vscode-readme.png)
-
-
-
 ------
 
 ### Polybar:
@@ -40,4 +40,3 @@
 
 
 ![Polybar-almost-there](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
-
