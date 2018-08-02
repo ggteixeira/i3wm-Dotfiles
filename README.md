@@ -5,7 +5,7 @@
 ![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
 
 - **Plugins instalados:**
-  - [Vundle](https://github.com/VundleVim/Vundle.vim)
+  - Gerenciador de Plugins ([Vundle](https://github.com/VundleVim/Vundle.vim))
   - [Auto Pairs](https://github.com/jiangmiao/auto-pairs)
   - [The NERDTree](https://github.com/scrooloose/nerdtree)
   - [Syntastic](https://github.com/vim-syntastic/syntastic)
