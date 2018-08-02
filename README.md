@@ -1,4 +1,4 @@
-# i3wm-dotfiles
+# dotfiles
 
 ### **VIM**
 
