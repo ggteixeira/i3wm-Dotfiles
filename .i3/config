@@ -11,15 +11,15 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 2
-new_float pixel 2
+new_window pixel 3
+new_float pixel 3
 
 # Hide borders
 hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 2 
+bindsym $mod+y border pixel 3
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -75,6 +75,8 @@ bindsym $mod+F3 exec termite -e ranger
 bindsym $mod+F4 exec pcmanfm
 bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F5 exec termite -e 'mocp'
+bindsym $mod+F6 exec spotify
+bindsym $mod+F7 exec telegram-desktop
 
 bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
@@ -296,7 +298,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -306,12 +308,15 @@ exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id sbxkb
 # exec_always --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift
 exec --no-startup-id wal -R
+
+exec --no-startup-id tlp-start
+#Tempo até que a tela tranque:
+exec --no-startup-id xautolock -time 10 -locker blurlock
 
 
 # Color palette used for the terminal ( ~/.Xresources file )
