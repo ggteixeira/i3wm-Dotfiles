@@ -1,8 +1,16 @@
 # dotfiles
 
+### Polybar:
+
+![polybar-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
+
+------
+
 ### **VIM**
 
 ![terminal-readme.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
+
+
 
 - **Plugins instalados:**
   - Gerenciador de Plugins: [Vundle](https://github.com/VundleVim/Vundle.vim)
@@ -19,6 +27,8 @@
 
 ![vscode-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/vscode-readme.png)
 
+
+
 - **Extensões instaladas:**
   - Keymaps do Atom: [Atom Keymap (keymap)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
   - Enhancement para HTML e CSS: [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
@@ -29,8 +39,6 @@
   - Tema: [Plastic](https://marketplace.visualstudio.com/items?itemName=will-stone.plastic)
   - Pacote de idioma: [Portuguese (Brazil) Language Pack](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-pt-BR)
   - Plugin para o Python: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-------
 
-### Polybar:
+---------
 
-![polybar-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
