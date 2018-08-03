@@ -2,41 +2,35 @@
 
 ### **VIM**
 
-![Terminals](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
+![terminal-readme.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
 
 - **Plugins instalados:**
-  - Gerenciador de Plugins ([Vundle](https://github.com/VundleVim/Vundle.vim))
-  - [Auto Pairs](https://github.com/jiangmiao/auto-pairs)
-  - [The NERDTree](https://github.com/scrooloose/nerdtree)
-  - [Syntastic](https://github.com/vim-syntastic/syntastic)
-  - [vim-atom-dark](https://github.com/gosukiwi/vim-atom-dark)
-  - [vim-airline](https://github.com/vim-airline/vim-airline)
-  - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
-  - [Python-mode](https://github.com/python-mode/python-mode)
-  - [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
-
-
+  - Gerenciador de Plugins: [Vundle](https://github.com/VundleVim/Vundle.vim)
+  - Parênteses inteligentes: [Auto Pairs](https://github.com/jiangmiao/auto-pairs)
+  - Árvore de arquivos: [The NERDTree](https://github.com/scrooloose/nerdtree)
+  - Syntax checking: [Syntastic](https://github.com/vim-syntastic/syntastic)
+  - Statusbar personalizada: [vim-airline](https://github.com/vim-airline/vim-airline) / [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+  - Ferramentas para desenvolvimento Python: [Python-mode](https://github.com/python-mode/python-mode)
+  - Syntax highlighting (Python): [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
 
 ------
 
 ### **Visual Studio Code:**
 
-![vscode](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/vscode-readme.png)
+![vscode-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/vscode-readme.png)
 
 - **Extensões instaladas:**
-  - [Atom Keymap (keymap)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
-  - [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
-  - [Bracked Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
-  - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
-  - [dark-plus-syntax](https://marketplace.visualstudio.com/items?itemName=dunstontc.dark-plus-syntax) (syntax highlighting)
-  - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) (tema)
-  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-  - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) (keymap)
-
+  - Keymaps do Atom: [Atom Keymap (keymap)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings)
+  - Enhancement para HTML e CSS: [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+  - Colorizador de parênteses: [Bracked Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+  - Terminal interno: [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+  - Mostrador de cores em códigos: [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+  - Suporte a Markdown: [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+  - Tema: [Plastic](https://marketplace.visualstudio.com/items?itemName=will-stone.plastic)
+  - Pacote de idioma: [Portuguese (Brazil) Language Pack](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-pt-BR)
+  - Plugin para o Python: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 ------
 
 ### Polybar:
 
-
-
-![Polybar-almost-there](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
+![polybar-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
