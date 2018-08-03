@@ -70,6 +70,7 @@ let g:airline_theme='wal'
 let g:airline_powerline_fonts = 1 
 
 " ==== lints
+
 let g:pymode_lint=0
 
 " ==== * ==== Python ==== * ==== * ====
@@ -81,6 +82,7 @@ Plugin 'vim-python/python-syntax'
 let g:python_highlight_all = 1 
 let g:python_highlight_string_formatting = 1
 let g:Python3Syntax = 1
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
