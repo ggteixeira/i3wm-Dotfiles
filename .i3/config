@@ -4,11 +4,12 @@
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+# Settings básicas:
+
+# Tela de modificação: (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-# Set terminal:
-
+# Terminal:
 set $term termite
 
 # set default desktop layout (default is tiling)
