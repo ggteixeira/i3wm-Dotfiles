@@ -112,9 +112,9 @@ enable-scroll = false
 strip-wsnumbers = true
 ; index-sort = false
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
@@ -341,13 +341,14 @@ label-indicator-background = ${colors.primary}
 
 [module/spotify]
 type = custom/script
-interval = 1
+interval = 5
 format-prefix = "  "
 format = <label>
 exec = python ~/.config/polybar/scripts/spotify_status.py -t 40
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding = 2
+
 
 
 ###################################
