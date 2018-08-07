@@ -831,10 +831,12 @@
 ## Font used in the statusbar.
 ## Type: Font
 # c.fonts.statusbar = '10pt monospace'
+c.fonts.statusbar = '10pt noto sans'
+
 
 ## Font used in the tab bar.
 ## Type: QtFont
-# c.fonts.tabs = '10pt monospace'
+c.fonts.tabs = '10pt noto sans '
 
 ## Font family for cursive fonts.
 ## Type: FontFamily
@@ -1164,11 +1166,11 @@
 ##   - tr-TR: Turkish (Turkey)
 ##   - uk-UA: Ukrainian (Ukraine)
 ##   - vi-VN: Vietnamese (Viet Nam)
-# c.spellcheck.languages = []
+c.spellcheck.languages = []
 
 ## Hide the statusbar unless a message is shown.
 ## Type: Bool
-# c.statusbar.hide = False
+c.statusbar.hide = False
 
 ## Padding (in pixels) for the statusbar.
 ## Type: Padding
@@ -1192,6 +1194,7 @@
 ##   - keypress: Display pressed keys when composing a vi command.
 ##   - progress: Progress bar for the current page loading.
 # c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
+c.statusbar.widgets = ['progress', 'keypress', 'url', 'scroll', 'tabs']
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
@@ -1225,7 +1228,7 @@
 ##   - always: Always show favicons.
 ##   - never: Always hide favicons.
 ##   - pinned: Show favicons only on pinned tabs.
-# c.tabs.favicons.show = 'always'
+c.tabs.favicons.show = 'always'
 
 ## Padding (in pixels) for tab indicators.
 ## Type: Padding
@@ -1262,7 +1265,7 @@
 
 ## Switch between tabs using the mouse wheel.
 ## Type: Bool
-# c.tabs.mousewheel_switching = True
+c.tabs.mousewheel_switching = False
 
 ## Position of new tabs opened from another tab.
 ## Type: NewTabPosition
@@ -1271,7 +1274,7 @@
 ##   - next: After the current tab.
 ##   - first: At the beginning.
 ##   - last: At the end.
-# c.tabs.new_position.related = 'next'
+c.tabs.new_position.related = 'last'
 
 ## Position of new tabs which aren't opened from another tab.
 ## Type: NewTabPosition
@@ -1297,7 +1300,7 @@
 ##   - bottom
 ##   - left
 ##   - right
-# c.tabs.position = 'top'
+c.tabs.position = 'top'
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
@@ -1314,7 +1317,7 @@
 ##   - never: Always hide the tab bar.
 ##   - multiple: Hide the tab bar if only one tab is open.
 ##   - switching: Show the tab bar when switching tabs.
-# c.tabs.show = 'always'
+c.tabs.show = 'multiple'
 
 ## Duration (in milliseconds) to show the tab bar before hiding it when
 ## tabs.show is set to 'switching'.
@@ -1355,7 +1358,7 @@
 ## Width (in pixels or as percentage of the window) of the tab bar if
 ## it's vertical.
 ## Type: PercOrInt
-# c.tabs.width = '20%'
+c.tabs.width = '5%'
 
 ## Wrap when changing tabs.
 ## Type: Bool
@@ -1400,10 +1403,17 @@
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
+c.url.searchengines = {
+    'DEFAULT': 'https://www.google.com.ar/search?q={}',
+    'aw': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
+    'red': 'https://reddit.com/r/{}',
+    'yt': 'https://www.youtube.com/results?search_query={}',
+    'w': 'https://www.wikipedia.org/search-redirect.php?family=wikipedia&language=en&search={}&language=en&go=Go',
+    }
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-# c.url.start_pages = ['https://start.duckduckgo.com']
+c.url.start_pages = ['https://google.com.br']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
@@ -1421,7 +1431,7 @@
 
 ## Default zoom level.
 ## Type: Perc
-# c.zoom.default = '100%'
+c.zoom.default = '90%'
 
 ## Available zoom levels.
 ## Type: List of Perc
