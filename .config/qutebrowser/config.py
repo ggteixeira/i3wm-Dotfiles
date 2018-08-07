@@ -1166,7 +1166,7 @@ c.fonts.tabs = '10pt noto sans '
 ##   - tr-TR: Turkish (Turkey)
 ##   - uk-UA: Ukrainian (Ukraine)
 ##   - vi-VN: Vietnamese (Viet Nam)
-c.spellcheck.languages = [pt-BR]
+c.spellcheck.languages = []
 
 ## Hide the statusbar unless a message is shown.
 ## Type: Bool
@@ -1403,10 +1403,17 @@ c.tabs.width = '5%'
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
+c.url.searchengines = {
+    'DEFAULT': 'https://www.google.com.ar/search?q={}',
+    'aw': 'https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={}',
+    'red': 'https://reddit.com/r/{}',
+    'yt': 'https://www.youtube.com/results?search_query={}',
+    'w': 'https://www.wikipedia.org/search-redirect.php?family=wikipedia&language=en&search={}&language=en&go=Go',
+    }
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-# c.url.start_pages = ['https://start.duckduckgo.com']
+c.url.start_pages = ['https://google.com.br']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
@@ -1424,7 +1431,7 @@ c.tabs.width = '5%'
 
 ## Default zoom level.
 ## Type: Perc
-# c.zoom.default = '100%'
+c.zoom.default = '90%'
 
 ## Available zoom levels.
 ## Type: List of Perc
