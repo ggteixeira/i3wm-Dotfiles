@@ -75,13 +75,22 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
 
 # Start Applications
-bindsym $mod+F1 exec chromium
-bindsym $mod+F3 exec termite -e ranger
+bindsym $mod+F1 exec --no-startup-id chromium
+bindsym $mod+Shift+F1 exec --no-startup-id qutebrowser
+#bindsym $mod+F2 exec --no-startup-id termite
+bindsym $mod+F3 exec --no-startup-id code
 bindsym $mod+F4 exec pcmanfm
 bindsym $mod+Shift+F4 exec gksu pcmanfm
-bindsym $mod+F5 exec termite -e 'mocp'
-bindsym $mod+F6 exec spotify
-bindsym $mod+F7 exec telegram-desktop
+#bindsym $mod+F5 exec --no-startup-id
+bindsym $mod+F6 exec --no-startup-id spotify
+bindsym $mod+Shift+F6 exec termite -e 'mocp'
+bindsym $mod+F7 exec --no-startup-id telegram-desktop
+#bindsym $mod+F8 exec --no-startup-id
+#bindsym $mod+F9 exec --no-startup-id
+#bindsym $mod+F10 exec --no-startup-id
+#bindsym $mod+Ff11 exec --no-startup-id
+#bindsym $mod+F12 exec --no-startup-id
+
 
 bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
@@ -152,11 +161,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+m move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+m scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -184,16 +193,17 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
 # Iniciando apps em workspaces específicos:
-assign [class="Termite"] $ws1
-assign [class="Code"] $ws2
-assign [class="Chromium"] $ws3
+assign [class="Chromium"] $ws1
+assign [class="qutebrowser"] $ws1
+assign [class="Termite"] $ws2
+assign [class="Code"] $ws3
 assign [class="Pcmanfm"] $ws4
-assign [class="Ranger"] $ws4
 assign [class="Simplenote"] $ws5
 assign [class="Typora"] $ws5
 assign [class="Spotify"] $ws6
 assign [class="TelegramDesktop"] $ws7
 assign [class="Pamac-manager"] $ws8
+assign [class="Termite" instance="Ranger"] $ws4
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -389,7 +399,7 @@ client.background       $bg
 
 # Set inner/outer gaps
 
-gaps inner 5
+gaps inner 7
 gaps outer 1
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
@@ -451,5 +461,5 @@ bindsym $mod+shift+x exec blurlock
 
 # Limitando o tamanho máximo da janela flutuante:
 
-floating_minimum_size 0 x 0
+floating_minimum_size 10 x 10
 floating_maximum_size 1078 x 650
