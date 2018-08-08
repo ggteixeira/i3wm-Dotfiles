@@ -6,7 +6,7 @@
 
 ------
 
-|                                  |                                         |
+| Informações básicas              |                                         |
 | -------------------------------- | --------------------------------------- |
 | Manjaro i3wm (Community Edition) | https://manjaro.org/community-editions/ |
 | Polybar                          | https://github.com/jaagr/polybar        |
