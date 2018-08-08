@@ -341,10 +341,10 @@ label-indicator-background = ${colors.primary}
 
 [module/spotify]
 type = custom/script
-interval = 5
+interval = 3
 format-prefix = "  "
 format = <label>
-exec = python ~/.config/polybar/scripts/spotify_status.py -t 40
+exec = python ~/.config/polybar/scripts/spotify_status.py -t 65
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding = 2
