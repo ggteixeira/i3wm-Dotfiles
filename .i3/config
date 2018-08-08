@@ -327,6 +327,7 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift
 exec --no-startup-id wal -R
+exec --no-startup-id compton -b
 
 exec --no-startup-id tlp-start
 #Tempo até que a tela tranque:
