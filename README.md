@@ -1,5 +1,11 @@
 # dotfiles
 
+[TOC]
+
+****
+
+
+
 ### Polybar:
 
 ![polybar-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
@@ -12,14 +18,17 @@
 
 
 
-- **Plugins instalados:**
-  - Gerenciador de Plugins: [Vundle](https://github.com/VundleVim/Vundle.vim)
-  - Parênteses inteligentes: [Auto Pairs](https://github.com/jiangmiao/auto-pairs)
-  - Árvore de arquivos: [The NERDTree](https://github.com/scrooloose/nerdtree)
-  - Syntax checking: [Syntastic](https://github.com/vim-syntastic/syntastic)
-  - Statusbar personalizada: [vim-airline](https://github.com/vim-airline/vim-airline) / [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
-  - Ferramentas para desenvolvimento Python: [Python-mode](https://github.com/python-mode/python-mode)
-  - Syntax highlighting (Python): [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax)
+| **Plugins instalados:**                 |                                                              |
+| :-------------------------------------- | ------------------------------------------------------------ |
+| Gerenciador de Plugins                  | [Vundle](https://github.com/VundleVim/Vundle.vim)            |
+| Parênteses inteligentes                 | [Auto Pairs](https://github.com/jiangmiao/auto-pairs)        |
+| Árvore de arquivos                      | [The NERDTree](https://github.com/scrooloose/nerdtree)       |
+| Syntax checking                         | [Syntastic](https://github.com/vim-syntastic/syntastic)      |
+| Statusbar personalizada                 | [vim-airline](https://github.com/vim-airline/vim-airline) / [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes) |
+| Ferramentas para desenvolvimento Python | [Python-mode](https://github.com/python-mode/python-mode)    |
+| Syntax highlighting (Python)            | [Python syntax highlighting for Vim](https://github.com/vim-python/python-syntax) |
+
+
 
 ------
 
