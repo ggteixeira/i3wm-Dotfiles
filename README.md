@@ -1,10 +1,18 @@
 # dotfiles
 
-### Polybar:
+### Manjaro i3wm, Polybar e Pywal:
 
 ![polybar-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
 
 ------
+
+|                                  |                                         |
+| -------------------------------- | --------------------------------------- |
+| Manjaro i3wm (Community Edition) | https://manjaro.org/community-editions/ |
+| Polybar                          | https://github.com/jaagr/polybar        |
+| Pywal                            | https://github.com/dylanaraps/pywal     |
+
+
 
 ### **VIM**
 
