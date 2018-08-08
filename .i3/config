@@ -313,7 +313,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -461,5 +461,5 @@ bindsym $mod+shift+x exec blurlock
 
 # Limitando o tamanho máximo da janela flutuante:
 
-floating_minimum_size 10 x 10
+floating_minimum_size 0 x 0
 floating_maximum_size 1078 x 650
