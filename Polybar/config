@@ -26,9 +26,11 @@ alert = #ff0000
 line-size = 1
 border-size = 0
 ;border-color = #00000000
-module-margin-left = 2
-module-margin-right = 2
-; separator = |
+;module-margin-left = 2
+;module-margin-right = 2
+module-margin = 1
+;separator = |
+separator-color = ${colors.alert}
 
 ;---------------------;
 ; DIMENSIONS ;
@@ -178,6 +180,7 @@ full-at = 100
 format-charging =  <animation-charging> <label-charging> (Carregando)
 label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
+format-charging-background = ${colors.background}
 animation-charging-framerate = 700
 
 format-discharging = <ramp-capacity><label-discharging>
@@ -321,10 +324,10 @@ exec = checkupdates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 tail = true
-format = Há atualizações
-format-prefix =" "
+format = 
+;format-prefix =" "
 format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.secondary}
 click-left = exec pamac-updater
 
 ; label = %{A1:pamac-manager & disown:} %{A3:termite --exec=pacui & disown:}%output%%{A} %{A}
@@ -348,77 +351,3 @@ exec = python ~/.config/polybar/scripts/spotify_status.py -t 65
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding = 2
-
-
-
-###################################
-#            bottom bar           #
-###################################
-
-[bar/bottom]
-
-line-size = 1
-border-size = 0
-;border-color = #00000000
-module-margin-left = 1
-module-margin-right = 1
-; separator = |
-
-;---------------------;
-; DIMENSIONS ;
-;--------------------;
-width = 100%
-height = 20
-offset-y = 0
-offset-x = 0
-
-border-top-size = 0
-border-bottom-size = 0
-border-right-size = 0
-border-left-size = 0
-
-;-----------------;
-; LOCATION ;
-;----------------;
-bottom = true
-
-;-------------;
-; FONTS ;
-;-----------;
-
-font-0 = "Noto Sans:style:Regular:pixelsize=8.5;2"
-font-1 = "Iosevka:style:Regular:pixelsize=9;3"
-font-2 = "Font Awesome:style=Regular:pixelsize=10;3"
-font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=11;2"
-font-4 = "icomoon:size=11:style=Regular;5"
-
-
-;---------------;
-; COLORS ;
-;--------------;
-
-background = ${colors.background}
-background-alt = ${colors.background-alt}
-foreground = ${colors.foreground}
-foreground-alt = ${colors.foreground-alt}
-highlight = ${colors.highlight}
-primary = ${colors.primary}
-secondary = ${colors.secondary}
-alert = ${colors.alert}
-
-;----------------------------;
-; MISCELLANEOUS ;
-;---------------------------;
-monitor = eDP1
-monitor-strict = true
-fixed-center = true
-radius = 0.0
-
-modules-left =
-modules-center =
-modules-right = 
-override-redirect = false
-padding-left = 0
-padding-right = 1
-screenchange-reload = true
-locale = pt_BR.UTF-8
