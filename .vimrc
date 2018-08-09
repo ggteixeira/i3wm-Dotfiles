@@ -22,6 +22,7 @@ set syntax=python
 filetype plugin indent on
 filetype plugin on
 set smarttab
+set linebreak
 
 
 " set the runtime path to include Vundle and initialize
