@@ -300,7 +300,7 @@ output = eDP1
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
-format = <bar> 
+format = <bar>
 label = %percentage%%
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
