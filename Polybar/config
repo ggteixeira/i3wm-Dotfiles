@@ -81,9 +81,9 @@ monitor-strict = true
 fixed-center = true
 radius = 0.0
 
-modules-left = i3 spotify 
+modules-left = i3 xwindow
 modules-center = 
-modules-right =  keyboard pkg backlight volume memory battery date
+modules-right =  keyboard spotify pkg backlight volume memory battery date
 override-redirect = false
 padding-left = 0
 padding-right = 0
@@ -121,7 +121,9 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
-ws-icon-7 = 8;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+
 
 label-focused = %icon% 
 label-focused-foreground = ${colors.foreground}
@@ -154,7 +156,7 @@ type = internal/xwindow
 format = <label>
 
 label = %title%
-label-maxlen = 80
+label-maxlen = 60
 
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
@@ -347,7 +349,7 @@ type = custom/script
 interval = 3
 format-prefix = "  "
 format = <label>
-exec = python ~/.config/polybar/scripts/spotify_status.py -t 65
+exec = python ~/.config/polybar/scripts/spotify_status.py -t 40
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding = 2

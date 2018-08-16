@@ -85,7 +85,7 @@ bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F6 exec --no-startup-id spotify
 bindsym $mod+Shift+F6 exec termite -e 'mocp'
 bindsym $mod+F7 exec --no-startup-id telegram-desktop
-#bindsym $mod+F8 exec --no-startup-id
+bindsym $mod+F8 exec --no-startup-id thunderbird
 #bindsym $mod+F9 exec --no-startup-id
 #bindsym $mod+F10 exec --no-startup-id
 #bindsym $mod+Ff11 exec --no-startup-id
@@ -137,7 +137,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 
 # split orientation
 # bindsym $mod+h split h;exec notify-send 'tile horizontally'
-# bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+v split h;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -181,6 +181,7 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+set $ws9 9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -191,6 +192,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
 
 # Iniciando apps em workspaces específicos:
 assign [class="Chromium"] $ws1
@@ -198,12 +201,13 @@ assign [class="qutebrowser"] $ws1
 assign [class="Termite"] $ws2
 assign [class="Code"] $ws3
 assign [class="Pcmanfm"] $ws4
+assign [class="Termite" instance="Ranger"] $ws4
 assign [class="Simplenote"] $ws5
 assign [class="Typora"] $ws5
 assign [class="Spotify"] $ws6
 assign [class="TelegramDesktop"] $ws7
-assign [class="Pamac-manager"] $ws8
-assign [class="Termite" instance="Ranger"] $ws4
+assign [class="Thunderbird"] $ws8
+assign [class="Pamac-manager"] $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -214,6 +218,8 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -224,6 +230,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 
 # Open specific applications in floating mode
@@ -259,7 +266,7 @@ for_window [class="Xfburn"] floating enable
 for_window [urgent=latest] focus
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
