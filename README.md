@@ -4,19 +4,17 @@
 
 ![polybar-terminal.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/polybar-readme.png)
 
-Informações básicas
+**Informações básicas**
 
 - Manjaro i3wm (Community Edition): https://manjaro.org/community-editions/
 - Polybar: https://github.com/jaagr/polybar
 - Pywal: https://github.com/dylanaraps/pywal
 
-
+------
 
 ### **VIM**
 
 ![terminal-readme.png](https://github.com/guiemi/i3wm-dotfiles/blob/master/prints/terminal-readme.png)
-
-
 
 **Plugins instalados:**
 
