@@ -31,7 +31,7 @@ compinit
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_THEME="robbyrussell"
-POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_DISABLE_RPROMPT=false
 
 # ZSH_THEME="agnoster"
 # ZSH_THEME="random"
@@ -98,11 +98,18 @@ AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=cyan'
 
 source $ZSH/oh-my-zsh.sh
 
+# VirtualEnv:
+
 function virtualenv_info {
  [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 plugins=(virtualenv)
 AGNOSTER_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
+
+# disables prompt mangling in virtual_env/bin/activate
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+
 
 # User configuration
 
@@ -143,6 +150,7 @@ alias zshrc='vim ~/.zshrc'
 # POWERLEVEL9k SETTINGS
 
 # source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
 # Mais uma tentativa de colocar o VirtualEnv no ZSH:
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
