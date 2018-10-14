@@ -89,6 +89,7 @@ POWERLEVEL9K_DISABLE_RPROMPT=false
 plugins=(
   git zsh-autosuggestions
   zsh-256color
+  virtualenvwrapper
 )
 
 # Autosuggestions (Manjaro/Arch):
@@ -105,7 +106,8 @@ function virtualenv_info {
 }
 plugins=(virtualenv)
 AGNOSTER_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
-
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)
 # disables prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
@@ -167,3 +169,17 @@ cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
+
+
+# VirtualenvWrapper:
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+
+
+# default location of virtual environment directories
+export WORKON_HOME=$HOME/.virtualenvs
+# default python version to use with virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
+source `which virtualenvwrapper.sh`
