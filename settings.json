@@ -69,12 +69,7 @@
     "color-highlight.markerType": "dot-after",
     "workbench.colorTheme": "Plastic",
     "terminal.external.linuxExec": "Termite",
-    "vim.statusBarColorControl": true,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
-    },
+    "vim.statusBarColorControl": false,
     "editor.colorDecorators": false,
     // "python.pythonPath": "/usr/bin/python",
     "python.venvPath": "/home/guiemi/.virtualenvs/",
