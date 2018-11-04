@@ -1,15 +1,16 @@
 {
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/tempCodeRunnerFile.py": true,
+        "**/__pycache__": true,
         "**/.directory": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/.hg": true,
         "**/.idea": true,
+        "**/.svn": true,
         "**/.vscode": true,
-        "**/.gitignore":true
+        "**/CVS": true,
+        "**/tempCodeRunnerFile.py": true
     },
 
     "atomKeymap.promptV3Features": true,
@@ -22,7 +23,7 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "editor.cursorWidth": 3,
     "editor.fontSize": 15,
     "window.zoomLevel": -1,
@@ -60,8 +61,6 @@
         "Red"
     ],
     "update.channel": "none",
-    "python.venvPath": "/home/guiemi/Dropbox/programacao/python/python-exercises/django/venv/bin/python3",
-    "python.pythonPath": "/usr/bin/python3.7",
     "explorer.confirmDragAndDrop": false,
     "window.menuBarVisibility": "toggle",
     "workbench.startupEditor": "newUntitledFile",
@@ -77,4 +76,9 @@
         "statusBar.debuggingBackground": "#005f5f"
     },
     "editor.colorDecorators": false,
+    // "python.pythonPath": "/usr/bin/python",
+    "python.venvPath": "/home/guiemi/.virtualenvs/",
+    "breadcrumbs.enabled": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "none",
 }
