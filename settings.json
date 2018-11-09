@@ -23,9 +23,8 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "editor.cursorWidth": 3,
-    "editor.fontSize": 15,
     "window.zoomLevel": -1,
     "editor.smoothScrolling": true,
     "terminal.integrated.cursorStyle": "line",
@@ -48,7 +47,6 @@
     "python.autoComplete.addBrackets": true,
     "python.formatting.provider": "autopep8",
     "editor.autoIndent": true,
-    "editor.fontLigatures": true,
     "bracketPairColorizer.consecutivePairColors": [
         "()",
         "[]",
@@ -76,4 +74,5 @@
     "breadcrumbs.enabled": true,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "none",
+    "editor.fontLigatures": true,
 }
