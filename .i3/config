@@ -53,6 +53,10 @@ bindsym $mod+Ctrl+space exec --no-startup-id dmenu_recency -nb "$fg" -nf "$bg" -
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
+# enable natural scrolling
+
+exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
+
 ##########################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ###########################################################################################
