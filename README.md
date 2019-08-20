@@ -1,4 +1,4 @@
-# dotfiles
+# Manjaro Linux i3wm dotfiles
 
 ### Manjaro i3wm, Polybar e Pywal:
 
