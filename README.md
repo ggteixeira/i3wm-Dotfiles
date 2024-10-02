@@ -1,4 +1,4 @@
-# Manjaro Linux i3wm dotfiles
+# [Repositório desatualizado. Os dotfiles atualizados estão no repositório [ggteixeira/dotfiles](https://github.com/ggteixeira/dotfiles)]
 
 ### Manjaro i3wm, Polybar e Pywal:
 
